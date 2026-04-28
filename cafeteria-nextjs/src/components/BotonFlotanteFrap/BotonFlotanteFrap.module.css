@@ -1,0 +1,24 @@
+.frap {
+  position: fixed;
+  bottom: calc(var(--space-3) - 0.8rem);
+  right: calc(var(--space-3) - 0.8rem);
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: var(--radius-circle);
+  background-color: var(--color-green-accent);
+  color: var(--color-white);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-frap-base), var(--shadow-frap-ambient);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  z-index: 100;
+  padding: 0;
+}
+
+.frap:active {
+  transform: scale(0.95);
+  box-shadow: var(--shadow-frap-base), 0 8px 12px rgba(0,0,0,0);
+}

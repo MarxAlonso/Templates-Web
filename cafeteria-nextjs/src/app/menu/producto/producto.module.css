@@ -1,0 +1,203 @@
+.paginaProducto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerBanda {
+  width: 100%;
+  background-color: var(--color-house-green);
+  color: var(--color-white);
+  padding: var(--space-4) var(--outer-gutter-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.migaDePan {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--color-text-white-soft);
+  margin-bottom: var(--space-2);
+}
+
+.tituloProducto {
+  font-size: 3.2rem;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.contenedorImagen {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  padding: var(--space-5) var(--outer-gutter-md);
+}
+
+.imagenProducto {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius-circle);
+  box-shadow: var(--shadow-card);
+}
+
+.contenedorPrincipal {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 var(--outer-gutter-md) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.seccionOpciones {
+  width: 100%;
+}
+
+.tituloSeccion {
+  font-size: 2.4rem;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-ceramic);
+}
+
+.selectorTamano {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.botonTamano {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-3);
+  border-radius: var(--radius-card);
+  transition: all 0.2s ease;
+  flex: 1;
+  background-color: transparent;
+}
+
+.tamanoActivo {
+  border: 2px solid var(--color-green-accent);
+}
+
+.iconoVaso {
+  font-size: 3.2rem;
+  margin-bottom: var(--space-2);
+}
+
+.nombreTamano {
+  font-weight: 700;
+  color: var(--color-text-black);
+}
+
+.onzasTamano {
+  font-size: 1.3rem;
+  color: var(--color-text-black-soft);
+}
+
+.filaPersonalizacion {
+  position: relative;
+  border: 1px solid var(--color-ceramic);
+  border-radius: 4px;
+  padding: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.labelFlotante {
+  position: absolute;
+  top: -8px;
+  left: 12px;
+  background-color: var(--color-white);
+  padding: 0 4px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-black);
+}
+
+.controlCantidad {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.valorPersonalizacion {
+  font-size: 1.6rem;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.botonStepper {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-circle);
+  border: 1px solid var(--color-ceramic);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.valorStepper {
+  font-weight: 700;
+  min-width: 20px;
+  text-align: center;
+}
+
+.accionesPedido {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+  margin-top: var(--space-5);
+}
+
+.bandaDescripcion {
+  width: 100%;
+  background-color: var(--color-house-green);
+  padding: var(--space-6) var(--outer-gutter-md);
+  display: flex;
+  justify-content: center;
+}
+
+.contenedorDescripcion {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  color: var(--color-white);
+}
+
+.pillRecompensa {
+  display: inline-flex;
+  align-self: flex-start;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  padding: 4px 12px;
+  border-radius: var(--radius-button);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.textoDescripcion {
+  font-size: 1.6rem;
+  line-height: var(--line-height-normal);
+}
+
+.nutricionBreve {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.botonNutricion {
+  align-self: flex-start;
+  margin-top: var(--space-2);
+}

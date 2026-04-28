@@ -1,0 +1,108 @@
+.navGlobal {
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-nav);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 83px;
+  padding: 0 var(--outer-gutter-md);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.izquierda, .derecha {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--color-starbucks-green);
+  margin-right: var(--space-4);
+  letter-spacing: var(--letter-spacing-loose);
+}
+
+.enlaces {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.enlace {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--color-text-black);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.enlace:hover {
+  color: var(--color-green-accent);
+}
+
+.enlaceTienda {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--color-text-black);
+}
+
+.enlaceTienda:hover {
+  color: var(--color-green-accent);
+}
+
+.accionesEscritorio {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.hamburguesa {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .contenedor {
+    height: 99px;
+    padding: 0 var(--outer-gutter-lg);
+  }
+}
+
+@media (max-width: 767px) {
+  .contenedor {
+    height: 72px;
+    padding: 0 var(--outer-gutter);
+  }
+  
+  .enlaces, .accionesEscritorio {
+    display: none;
+  }
+  
+  .enlaces.menuAbierto {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    padding: var(--space-4);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .hamburguesa {
+    display: block;
+    color: var(--color-text-black);
+  }
+}

@@ -1,0 +1,20 @@
+.tarjeta {
+  background-color: var(--color-white);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.paddingNormal {
+  padding: var(--space-3);
+}
+
+.paddingNinguno {
+  padding: 0;
+}
+
+.paddingAmplio {
+  padding: var(--space-4);
+}
