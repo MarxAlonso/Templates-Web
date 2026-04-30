@@ -1,14 +1,19 @@
 .nav {
-  background: var(--white);
-  padding: 2rem 0;
-  border-bottom: 1px solid var(--gray-200);
   position: sticky;
   top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--gray-100);
   z-index: 1000;
+  height: 80px;
+  display: flex;
+  align-items: center;
 }
 
 .container {
   max-width: var(--max-width);
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -17,9 +22,10 @@
 }
 
 .logo {
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--dark);
+  letter-spacing: -0.02em;
 }
 
 .logo span {
@@ -28,26 +34,18 @@
 
 .navLinks {
   display: flex;
-  gap: 3rem;
+  gap: var(--space-8);
   align-items: center;
 }
 
-.navLinks a,
-.dropdownTrigger {
-  text-decoration: none;
-  color: var(--dark);
-  font-weight: 500;
-  font-size: 1.6rem;
-  transition: color 0.3s;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-family: var(--font-public-sans);
-  padding: 0;
+.navLinks li a {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  transition: var(--transition-fast);
 }
 
-.navLinks a:hover,
-.dropdownTrigger:hover {
+.navLinks li a:hover {
   color: var(--primary);
 }
 
@@ -56,104 +54,120 @@
 }
 
 .dropdownTrigger {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  cursor: pointer;
   display: flex;
   align-items: center;
+  gap: 4px;
+  padding: 0;
+  transition: var(--transition-fast);
+}
+
+.dropdownTrigger:hover {
+  color: var(--primary);
 }
 
 .dropdownContent {
-  display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background: var(--white);
-  min-width: 20rem;
+  min-width: 220px;
   box-shadow: var(--shadow-lg);
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  z-index: 100;
+  border-radius: var(--radius-md);
+  padding: var(--space-2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all var(--transition-normal);
+  border: 1px solid var(--gray-100);
+  margin-top: 10px;
 }
 
 .dropdownContent.visible {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .dropdownContent a {
-  padding: 1.2rem 1.6rem;
   display: block;
-  border-bottom: 1px solid var(--gray-100);
-  font-size: 1.5rem;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  color: var(--gray-700);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: var(--transition-fast);
 }
 
 .dropdownContent a:hover {
-  background: var(--gray-100);
+  background: var(--primary-light);
+  color: var(--primary-dark);
 }
 
 .ctaNav {
-  background: var(--gold);
-  color: var(--white);
-  padding: 1.4rem 2.8rem;
-  border-radius: var(--radius-sm);
-  text-decoration: none;
+  background: var(--primary);
+  color: var(--white) !important;
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-pill);
   font-weight: 700;
-  font-size: 1.5rem;
-  transition: background 0.3s;
+  font-size: 0.875rem;
+  box-shadow: 0 4px 14px 0 rgba(0, 191, 175, 0.3);
+  transition: all var(--transition-fast);
 }
 
 .ctaNav:hover {
-  background: #b8962e;
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(0, 191, 175, 0.4);
 }
 
 .hamburger {
   display: none;
   flex-direction: column;
-  gap: 5px;
-  padding: 0.5rem;
-  cursor: pointer;
+  gap: 6px;
   background: none;
   border: none;
+  cursor: pointer;
+  padding: 4px;
 }
 
 .hamburgerLine {
-  display: block;
   width: 24px;
   height: 2px;
   background: var(--dark);
-  transition: 0.3s;
+  transition: var(--transition-fast);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .navLinks {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: var(--white);
+    flex-direction: column;
+    padding: var(--space-10);
+    transform: translateX(100%);
+    transition: transform var(--transition-normal);
+    z-index: 999;
+  }
+
+  .navLinks.open {
+    transform: translateX(0);
+  }
+
   .hamburger {
     display: flex;
   }
 
   .ctaNav {
     display: none;
-  }
-
-  .navLinks {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--white);
-    padding: 2rem;
-    gap: 1.5rem;
-    box-shadow: var(--shadow-md);
-  }
-
-  .navLinks.open {
-    display: flex;
-  }
-
-  .dropdownContent {
-    position: static;
-    box-shadow: none;
-    min-width: auto;
-  }
-
-  .dropdownContent a {
-    padding-left: 2rem;
   }
 }

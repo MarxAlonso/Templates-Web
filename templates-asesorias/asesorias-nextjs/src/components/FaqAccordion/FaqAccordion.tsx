@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { FaqItem } from "@/types";
 import styles from "./FaqAccordion.module.css";
 
@@ -17,34 +18,45 @@ export function FaqAccordion({ items, titulo, supportTitulo = "Pregunta a nuestr
           <p>{supportDescripcion}</p>
           <div className={styles.supportLinks}>
             <a href="mailto:info@tuagencia.pe" className={styles.sLink}>
-              📩 Escríbenos a info@tuagencia.pe
+              <span className={styles.sIcon}>📩</span> Escríbenos a info@tuagencia.pe
             </a>
             <a href="https://wa.me/51999999999" className={styles.sLink}>
-              💬 Pregúntanos por WhatsApp
+              <span className={styles.sIcon}>💬</span> Pregúntanos por WhatsApp
             </a>
           </div>
           <div className={styles.teamFaces}>
-            <img src="https://i.pravatar.cc/100?img=32" alt="Asesor Tesis" />
-            <img src="https://i.pravatar.cc/100?img=44" alt="Editora APA" />
+            <div className={styles.avatarWrapper}>
+              <Image src="https://i.pravatar.cc/100?img=32" alt="Asesor Tesis" width={48} height={48} className={styles.avatar} />
+            </div>
+            <div className={styles.avatarWrapper}>
+              <Image src="https://i.pravatar.cc/100?img=44" alt="Editora APA" width={48} height={48} className={styles.avatar} />
+            </div>
           </div>
         </div>
 
         <div className={styles.accordion}>
           <h2 dangerouslySetInnerHTML={{ __html: titulo }} />
 
-          {items.map((item, i) => (
-            <div key={i} className={styles.accordionItem}>
-              <details open={i === 0}>
-                <summary className={styles.faqSummary}>{item.pregunta}</summary>
-                <div className={styles.answer}>
-                  {item.imagen && (
-                    <img src={item.imagen} alt={item.imagenAlt || ""} className={styles.faqImg} />
-                  )}
-                  <p>{item.respuesta}</p>
-                </div>
-              </details>
-            </div>
-          ))}
+          <div className={styles.itemsWrapper}>
+            {items.map((item, i) => (
+              <div key={i} className={styles.accordionItem}>
+                <details open={i === 0}>
+                  <summary className={styles.faqSummary}>
+                    {item.pregunta}
+                    <span className={styles.chevron}>↓</span>
+                  </summary>
+                  <div className={styles.answer}>
+                    {item.imagen && (
+                      <div className={styles.faqImgWrapper}>
+                        <Image src={item.imagen} alt={item.imagenAlt || ""} width={300} height={200} className={styles.faqImg} />
+                      </div>
+                    )}
+                    <p>{item.respuesta}</p>
+                  </div>
+                </details>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

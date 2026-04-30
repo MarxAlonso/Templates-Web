@@ -13,7 +13,7 @@ export const universidades: UniversidadConfig[] = [
       descripcion:
         "¿Alguna vez has sentido que escribir tu tesis es como intentar escalar el Everest en sandalias? Ese documento de Word en blanco puede ser más intimidante que un jurado. Si estás buscando información sobre la <strong>tesis universidad César Vallejo</strong>, has llegado al lugar indicado.",
       ctaText: "Solicitar Presupuesto Gratis",
-      heroImage: "/imagenes/ucv/[H1] Tesis CESAR VALLEJO TESIS Guía estratégica para graduarte sin complicaciones.jfif",
+      heroImage: "/imagenes/ucv/ucv-hero.jfif",
       heroImageAlt: "Tesis Universidad César Vallejo - Guía definitiva para graduarte",
       floatingCards: [
         {
@@ -48,11 +48,11 @@ export const universidades: UniversidadConfig[] = [
       ],
       formTitulo: "¡Inicia tu tesis ahora!",
       formSubtitulo: "Recibe una cotización gratuita en menos de 10 minutos.",
-      imagen1: "/imagenes/cibertesis/### [H3] Coherencia y consistencia metodológica.jfif",
+      imagen1: "/imagenes/cibertesis/ciber-metodologia.jfif",
       imagen1Alt: "Coherencia metodológica tesis UCV",
-      imagen2: "/imagenes/cibertesis/## [H2] Los tres pilares de una investigación lista para CIBERTESIS.jfif",
+      imagen2: "/imagenes/cibertesis/ciber-pilares.jfif",
       imagen2Alt: "Investigación para repositorio UCV",
-      imagen3: "/imagenes/ucv/## [H2] Los desafíos clave ¿Cómo destacar en el repositorio UCV.jfif",
+      imagen3: "/imagenes/ucv/ucv-desafios.jfif",
       imagen3Alt: "Desafíos de la tesis en el repositorio UCV",
       expertos: [
         {
@@ -62,8 +62,8 @@ export const universidades: UniversidadConfig[] = [
           especialidad: "Experta en APA 7",
         },
         {
-          imagen: "/imagenes/cibertesis/### [H3] La batalla contra el software de similitud Todos.jfif",
-          alt: "Software de similitud y Turnitin UCV",
+          imagen: "/imagenes/cibertesis/ciber-turnitin.jfif",
+          alt: "Software de similitud and Turnitin UCV",
           nombre: "Raimo",
           especialidad: "Master en Turnitin",
         },
@@ -101,9 +101,9 @@ export const universidades: UniversidadConfig[] = [
         { titulo: "Análisis Estadístico:", descripcion: "SPSS y recolección de datos profesional." },
         { titulo: "Sustentación:", descripcion: "Tu pasaporte al título con seguridad total." },
       ],
-      imagen1: "/imagenes/ucv/### [H3] Dominando el Turnitin en la UCV.jfif",
+      imagen1: "/imagenes/ucv/ucv-turnitin.jfif",
       imagen1Alt: "Control de plagio Turnitin tesis UCV",
-      imagen2: "/imagenes/ucv/### [H3] Formato APA y la normativa UCV.jfif",
+      imagen2: "/imagenes/ucv/ucv-apa.jfif",
       imagen2Alt: "Formato APA 7ma edición tesis UCV",
       docHeader: "Tesis_Final_UCV_v2.docx",
       docLineas: [
@@ -121,67 +121,61 @@ export const universidades: UniversidadConfig[] = [
       {
         pregunta: "1. ¿Cuánto tiempo toma realizar una tesis para la UCV con su asesoría?",
         respuesta: "El tiempo varía según el avance que ya tengas, pero trabajamos con cronogramas optimizados para que cumplas con las fechas de entrega sin correr a último minuto.",
-        imagen: "/imagenes/ucv/4. ¿Cuándo es el mejor momento para empezar con la asesoría.png",
+        imagen: "/imagenes/ucv/ucv-faq4.png",
         imagenAlt: "Cronograma de tesis UCV",
       },
       {
         pregunta: "2. ¿Me ayudan si mi tesis de la Universidad César Vallejo fue rechazada por Turnitin?",
         respuesta: "¡Totalmente! Somos especialistas en levantamiento de observaciones y reducción de porcentaje de similitud, asegurando que tu texto sea original y cumpla la normativa.",
-        imagen: "/imagenes/ucv/2. ¿Es muy difícil pasar el filtro de Turnitin en la César Vallejo.png",
+        imagen: "/imagenes/ucv/ucv-faq2.png",
         imagenAlt: "Reducción de Turnitin tesis UCV",
       },
       {
         pregunta: "3. ¿Ustedes también preparan para la sustentación final?",
         respuesta: "Sí, no solo entregamos el documento. Te preparamos con simulacros de preguntas, diapositivas impactantes y tips de oratoria para dominar al jurado.",
-        imagen: "/imagenes/ucv/3. ¿La asesoría incluye apoyo en la defensa o sustentación.png",
+        imagen: "/imagenes/ucv/ucv-faq3.png",
         imagenAlt: "Sustentación de tesis UCV",
       },
       {
         pregunta: "4. ¿Tienen expertos para todas las carreras de la César Vallejo?",
         respuesta: "Contamos con un equipo multidisciplinario que cubre las principales áreas de la UCV, desde Ciencias de la Salud hasta Humanidades y Negocios.",
-        imagen: "/imagenes/ucv/1. ¿Qué hago si mi asesor de la UCV me hace observaciones constantes.jfif",
+        imagen: "/imagenes/ucv/ucv-faq1.jfif",
         imagenAlt: "Asesoría personalizada carreras UCV",
       },
       {
         pregunta: "5. ¿Es confidencial el servicio de asesoría para mi tesis?",
         respuesta: "La confidencialidad es nuestra bandera. Tu información y tu proyecto están protegidos bajo estrictos contratos de ética y seguridad.",
-        imagen: "/imagenes/ucv/5. ¿Mi tesis publicada en el repositorio será pública para todos.png",
+        imagen: "/imagenes/ucv/ucv-faq5.png",
         imagenAlt: "Confidencialidad y repositorio tesis UCV",
       },
     ],
     footerCta: {
-      h2: "De la idea a la sustentación: Tu pasaporte al título",
-      descripcion: "Lograr el grado académico es un hito que cambiará tu vida. ¡Estamos listos para empezar cuando tú lo estés!",
-      ctaText: "¡Empezar mi Tesis UCV ahora!",
+      h2: "¿Listo para graduarte en la <strong>UCV</strong>?",
+      descripcion: "Solicita tu asesoría hoy y asegura tu título profesional.",
+      ctaText: "Hablar con un asesor UCV",
     },
     seo: {
-      title: "Tesis UCV - Asesoría Profesional | Guía Definitiva 2026",
-      description: "¿Sientes que tu tesis UCV se ha convertido en un laberinto? Te enseñamos cómo superar cada etapa, desde el plan de tesis hasta la sustentación exitosa.",
+      title: "Asesoría de Tesis UCV | Especialistas en César Vallejo",
+      description: "Asesoría integral para tu tesis en la UCV. Expertos en Turnitin, APA y metodología.",
       faqSchema: [
-        {
-          question: "¿Cuánto tiempo toma el proceso de asesoría en la UCV?",
-          answer: "Un plan de tesis toma 15 días y el desarrollo total entre 45 a 60 días, alineados a los cronogramas de la UCV.",
-        },
-        {
-          question: "¿Garantizan el bajo porcentaje de similitud en Turnitin?",
-          answer: "Sí, garantizamos un índice de similitud menor al 20% con reporte Turnitin oficial.",
-        },
-      ],
-    },
+        { question: "¿Cuánto toma la asesoría?", answer: "Depende del avance, pero optimizamos cronogramas." },
+        { question: "¿Es confidencial?", answer: "100% bajo contrato ético." }
+      ]
+    }
   },
   {
-    nombre: "PUCP",
     slug: "tesis-pucp",
+    nombre: "PUCP",
     nombreCompleto: "Pontificia Universidad Católica del Perú",
-    primaryColor: "#002D72",
-    primaryRgba: "rgba(0, 45, 114, 0.05)",
+    primaryColor: "#004080",
+    primaryRgba: "rgba(0, 64, 128, 0.05)",
     hero: {
       preTitle: "Excelencia Académica PUCP",
       h1: '¿Cómo sobrevivir a tu <strong>tesis PUCP</strong> sin morir en el intento?',
       descripcion:
         "Entendemos que la excelencia académica de la PUCP exige un esfuerzo extra. Estamos aquí para ser tus sherpas en esta expedición hacia el título profesional.",
       ctaText: "Solicitar Asesoría PUCP",
-      heroImage: "/imagenes/pucp/h1¿Cómo sobrevivir a tu tesis PUCP sin morir en el intento Una guía desde la investigación hasta la victoriah1.jfif",
+      heroImage: "/imagenes/pucp/pucp-hero.jpg",
       heroImageAlt: "Tesis PUCP - Guía de investigación y éxito académico",
       floatingCards: [
         {
@@ -216,11 +210,11 @@ export const universidades: UniversidadConfig[] = [
       ],
       formTitulo: "¡Inicia tu tesis PUCP ahora!",
       formSubtitulo: "Recibe una cotización gratuita en menos de 10 minutos.",
-      imagen1: "/imagenes/pucp/h2La importancia de una estructura.jfif",
+      imagen1: "/imagenes/pucp/pucp-estructura.jpg",
       imagen1Alt: "Estructura sólida de la tesis PUCP",
-      imagen2: "/imagenes/pucp/h2eMetodología de una tesis PUCP ¿Cualitativa,.jfif",
+      imagen2: "/imagenes/pucp/pucp-metodologia.jpg",
       imagen2Alt: "Metodología de investigación tesis PUCP",
-      imagen3: "/imagenes/pucp/h2Conclusión El final del camino y.jfif",
+      imagen3: "/imagenes/pucp/pucp-conclusion.jpg",
       imagen3Alt: "Conclusión y éxito de la tesis PUCP",
       expertos: [
         {
@@ -269,9 +263,9 @@ export const universidades: UniversidadConfig[] = [
         { titulo: "Metodología:", descripcion: "Cualitativa, cuantitativa o enfoque mixto." },
         { titulo: "Sustentación:", descripcion: "Narrativa fascinante para cautivar al jurado." },
       ],
-      imagen1: "/imagenes/pucp/h2La importancia de una estructura.jfif",
+      imagen1: "/imagenes/pucp/pucp-estructura.jpg",
       imagen1Alt: "Estructura de tesis PUCP",
-      imagen2: "/imagenes/pucp/h2Conclusión El final del camino y.jfif",
+      imagen2: "/imagenes/pucp/pucp-conclusion.jpg",
       imagen2Alt: "Conclusión tesis PUCP",
       docHeader: "Tesis_Final_PUCP_v3.docx",
       docLineas: [
@@ -289,68 +283,62 @@ export const universidades: UniversidadConfig[] = [
       {
         pregunta: "1. ¿Cuál es el error más común al iniciar la tesis PUCP?",
         respuesta: "El error más frecuente es elegir un tema demasiado amplio. Recomendamos delimitar el problema de investigación para evitar perderse.",
-        imagen: "/imagenes/pucp/1. ¿Cuál es el error más común al iniciar la tesis PUCP.jfif",
+        imagen: "/imagenes/pucp/pucp-faq1.jfif",
         imagenAlt: "Errores comunes tesis PUCP",
       },
       {
         pregunta: "2. ¿Cómo puedo acceder a los trabajos previos en el repositorio PUCP?",
         respuesta: "Puedes acceder de forma virtual a través de la biblioteca de la universidad. Es vital revisar antecedentes similares para no 'descubrir la pólvora'.",
-        imagen: "/imagenes/pucp/2. ¿Cómo puedo acceder a los trabajos previos en el repositorio PUCP.jfif",
+        imagen: "/imagenes/pucp/pucp-faq2.jfif",
         imagenAlt: "Repositorio tesis PUCP",
       },
       {
         pregunta: "3. ¿Qué tan importante es tener un asesor de tesis en el proceso?",
         respuesta: "Es fundamental. Un buen asesor es un mentor, y nuestras asesorías externas complementan perfectamente el rigor exigido por la facultad.",
-        imagen: "/imagenes/pucp/3. ¿Qué tan importante es tener un asesor de tesis en el proceso de tu de tesis PUCP.jfif",
+        imagen: "/imagenes/pucp/pucp-faq3.jfif",
         imagenAlt: "Asesor de tesis PUCP",
       },
       {
         pregunta: "4. ¿Cuánto tiempo suele tomar terminar una tesis PUCP?",
         respuesta: "En promedio toma entre 8 meses y un año. Con un plan de trabajo estructurado, ese tiempo puede optimizarse considerablemente.",
-        imagen: "/imagenes/pucp/4. ¿Cuánto tiempo suele tomar terminar una tesis PUCP de pregrado.jfif",
+        imagen: "/imagenes/pucp/pucp-faq4.jfif",
         imagenAlt: "Tiempo duración tesis PUCP",
       },
       {
         pregunta: "5. ¿Qué pasa si mi tesis PUCP es rechazada por el jurado?",
         respuesta: "No es el fin del mundo. El jurado otorga observaciones que deben ser subsanadas con rapidez para asegurar el éxito.",
-        imagen: "/imagenes/pucp/5. ¿Qué pasa si mi tesis PUCP es rechazada por el jurado.jfif",
+        imagen: "/imagenes/pucp/pucp-faq5.jfif",
         imagenAlt: "Rechazo y sustentación tesis PUCP",
       },
     ],
     footerCta: {
-      h2: "¿Estás listo para iniciar tu camino al éxito?",
-      descripcion: "En resumen, completar tu tesis PUCP es una prueba de resistencia, pero también de pasión.",
-      ctaText: "¡Contactar un Asesor Experto!",
+      h2: "¿Listo para graduarte en la <strong>PUCP</strong>?",
+      descripcion: "Solicita tu asesoría hoy y asegura tu título profesional.",
+      ctaText: "Hablar con un asesor PUCP",
     },
     seo: {
-      title: "Tesis PUCP - Asesoría Profesional | Guía Definitiva 2026",
-      description: "¿Sientes que el proceso de tu tesis pucp se ha convertido en un laberinto? Te enseñamos cómo superar cada etapa con rigor académico.",
+      title: "Asesoría de Tesis PUCP | Excelencia Académica",
+      description: "Logra la excelencia en tu tesis PUCP con asesoría experta en rigor metodológico.",
       faqSchema: [
-        {
-          question: "¿Cuál es el error más común al iniciar la tesis PUCP?",
-          answer: "Elegir un tema demasiado amplio. Recomendamos delimitar el problema de investigación.",
-        },
-        {
-          question: "¿Cuánto tiempo suele tomar terminar una tesis PUCP de pregrado?",
-          answer: "En promedio entre 8 meses y un año, pero con un plan estructurado se optimiza considerablemente.",
-        },
-      ],
-    },
+        { question: "¿Cuál es el error común?", answer: "Elegir un tema demasiado amplio." },
+        { question: "¿Cómo acceder al repositorio?", answer: "Vía biblioteca virtual de la PUCP." }
+      ]
+    }
   },
   {
-    nombre: "UPC",
     slug: "tesis-upc",
+    nombre: "UPC",
     nombreCompleto: "Universidad Peruana de Ciencias Aplicadas",
-    primaryColor: "#CC0000",
-    primaryRgba: "rgba(204, 0, 0, 0.05)",
+    primaryColor: "#e6332a",
+    primaryRgba: "rgba(230, 51, 42, 0.05)",
     hero: {
-      preTitle: "Manual de Supervivencia UPC",
-      h1: 'Tesis <strong>Universidad UPC</strong>: El manual de supervivencia para alcanzar tu grado',
+      preTitle: "Innovación Académica UPC",
+      h1: 'Domina tu <strong>tesis UPC</strong> con nuestra metodología de éxito',
       descripcion:
-        "¿El Taller de Investigación de la UPC parece una tormenta? Somos tu GPS académico para dominar el Taller de Investigación y alcanzar tu meta.",
-      ctaText: "Solicitar Presupuesto UPC",
-      heroImage: "https://noticias.upc.edu.pe/wp-content/uploads/2022/05/IMG_5301-scaled.jpg",
-      heroImageAlt: "Asesoría Tesis UPC",
+        "La UPC exige un alto estándar de innovación y rigor. Te ayudamos a transformar tu idea en una investigación de impacto, lista para el repositorio académico.",
+      ctaText: "Solicitar Asesoría UPC",
+      heroImage: "/imagenes/pucp/pucp-hero.jpg",
+      heroImageAlt: "Tesis UPC - Asesoría profesional para graduación",
       floatingCards: [
         {
           icon: "🔬",
@@ -382,13 +370,13 @@ export const universidades: UniversidadConfig[] = [
         { texto: "<strong>Equipo especializado:</strong> Entendemos cada carrera de la UPC." },
         { texto: "<strong>Plazos optimizados:</strong> Nunca llegues tarde a una entrega." },
       ],
-      formTitulo: "¡Inicia tu tesis UPC ahora!",
+      formTitulo: "¡Inicia tu tesis UPC now!",
       formSubtitulo: "Recibe una cotización gratuita en menos de 10 minutos.",
-      imagen1: "/imagenes/pucp/h2eMetodología de una tesis PUCP ¿Cualitativa,.jfif",
+      imagen1: "/imagenes/pucp/pucp-metodologia.jpg",
       imagen1Alt: "Metodología de investigación tesis UPC",
-      imagen2: "/imagenes/pucp/h2Conclusión El final del camino y.jfif",
+      imagen2: "/imagenes/pucp/pucp-conclusion.jpg",
       imagen2Alt: "Conclusión y éxito tesis UPC",
-      imagen3: "/imagenes/pucp/h1¿Cómo sobrevivir a tu tesis PUCP sin morir en el intento Una guía desde la investigación hasta la victoriah1.jfif",
+      imagen3: "/imagenes/pucp/pucp-hero.jpg",
       imagen3Alt: "Guía de investigación UPC",
       expertos: [
         {
@@ -437,63 +425,55 @@ export const universidades: UniversidadConfig[] = [
         { titulo: "Coherencia Interna:", descripcion: "Objetivos, problemas y conclusiones alineados." },
         { titulo: "Sustentación:", descripcion: "Te preparamos con simulacros y feedback constante." },
       ],
-      imagen1: "/imagenes/pucp/1. ¿Cuál es el error más común al iniciar la tesis PUCP.jfif",
+      imagen1: "/imagenes/pucp/pucp-faq1.jfif",
       imagen1Alt: "Errores comunes tesis UPC",
-      imagen2: "/imagenes/pucp/3. ¿Qué tan importante es tener un asesor de tesis en el proceso de tu de tesis PUCP.jfif",
+      imagen2: "/imagenes/pucp/pucp-faq3.jfif",
       imagen2Alt: "Asesor de tesis UPC",
       docHeader: "Tesis_Final_UPC_v1.docx",
       docLineas: [
-        { texto: "El taller de investigación demanda ", corregido: "coherencia metodológica", original: "improvisación", textoFinal: " en cada entrega del avance..." },
-        { texto: "La muestra fue calculada considerando ", corregido: "180", original: "50", textoFinal: " sujetos para obtener resultados significativos..." },
+        { texto: "El proyecto se alinea con el pilar de ", corregido: "innovación", original: "mantenimiento", textoFinal: " propuesto por la UPC..." },
+        { texto: "Los resultados muestran un nivel de ", corregido: "significancia", original: "duda", textoFinal: " estadística del 0.05 en las pruebas realizadas..." },
       ],
       commentBubble: {
-        avatar: "https://i.pravatar.cc/100?img=15",
+        avatar: "https://i.pravatar.cc/100?img=11",
         avatarAlt: "Asesor Senior UPC",
-        nombre: "Ing. Torres",
-        texto: "Recuerda que en la UPC el porcentaje de similitud debe ser menor al 15%. He optimizado el parafraseo.",
+        nombre: "Mg. Soto",
+        texto: "He revisado el capítulo de resultados. La discusión de hallazgos ahora tiene el rigor UPC requerido.",
       },
     },
     faq: [
       {
-        pregunta: "1. ¿Cómo manejan los plazos urgentes para las entregas de la UPC?",
-        respuesta: "Nos adaptamos a tu calendario académico para que nunca llegues tarde a una entrega en el aula virtual.",
+        pregunta: "1. ¿Cómo manejan el porcentaje de Turnitin en la UPC?",
+        respuesta: "Trabajamos con parafraseo manual y profesional, asegurando que tu tesis sea 100% original y cumpla con el límite de la UPC.",
+        imagen: "/imagenes/pucp/pucp-faq2.jfif",
+        imagenAlt: "Control Turnitin UPC",
       },
       {
-        pregunta: "2. ¿Me ayudan si ya tengo observaciones de mi asesor de la UPC?",
-        respuesta: "¡Claro que sí! Analizamos las correcciones de tu asesor y ajustamos el documento para que cumpla con todas las expectativas.",
+        pregunta: "2. ¿La asesoría incluye el diseño del instrumento de investigación?",
+        respuesta: "Sí, diseñamos y validamos tus encuestas, guías de entrevista o fichas de observación según tu metodología.",
+        imagen: "/imagenes/pucp/pucp-faq4.jfif",
+        imagenAlt: "Diseño de instrumentos UPC",
       },
       {
-        pregunta: "3. ¿Ustedes realizan el análisis estadístico de la tesis UPC?",
-        respuesta: "Así es. Contamos con especialistas que transformarán tus encuestas en resultados contundentes y gráficos profesionales.",
-      },
-      {
-        pregunta: "4. ¿La asesoría incluye simulacros de sustentación?",
-        respuesta: "Definitivamente. Te preparamos con ensayos y preguntas tipo para que tu oratoria esté a la altura de tu investigación.",
-      },
-      {
-        pregunta: "5. ¿Qué pasa si mi tesis universidad UPC tiene un alto porcentaje en Turnitin?",
-        respuesta: "Realizamos una reestructuración y parafraseo profundo, manteniendo el sentido original pero optimizando la redacción.",
+        pregunta: "3. ¿Qué pasa si mi asesor de la UPC me cambia el tema?",
+        respuesta: "Nos adaptamos rápidamente. Te ayudamos a pivotar tu investigación para cumplir con las nuevas exigencias de tu asesor.",
+        imagen: "/imagenes/pucp/pucp-faq1.jfif",
+        imagenAlt: "Cambio de tema tesis UPC",
       },
     ],
     footerCta: {
-      h2: "¿Listo para el último gran salto?",
-      descripcion: "La tesis universidad UPC es la mejor vitrina de tus capacidades. ¡Estamos aquí para transformar el caos en impacto!",
-      ctaText: "¡Empezar mi Tesis UPC ahora!",
+      h2: "¿Listo para graduarte en la <strong>UPC</strong>?",
+      descripcion: "Solicita tu asesoría hoy y asegura tu título profesional.",
+      ctaText: "Hablar con un asesor UPC",
     },
     seo: {
-      title: "Tesis UPC - Asesoría Profesional | Manual de Supervivencia 2026",
-      description: "¿Sufriendo con tu tesis universidad UPC? Descubre cómo superar el Taller de Investigación, dominar Turnitin y lograr tu grado con asesoría experta.",
+      title: "Asesoría de Tesis UPC | Innovación y Rigor",
+      description: "Domina tu tesis UPC con nuestra metodología de éxito. Especialistas en cada carrera.",
       faqSchema: [
-        {
-          question: "¿Cómo manejan los plazos urgentes para las entregas de la UPC?",
-          answer: "Nos adaptamos a tu calendario académico para que nunca llegues tarde a una entrega en el aula virtual.",
-        },
-        {
-          question: "¿La asesoría incluye simulacros de sustentación?",
-          answer: "Sí, te preparamos con ensayos, preguntas tipo y feedback constante para que tu oratoria esté a la altura.",
-        },
-      ],
-    },
+        { question: "¿Cómo manejan Turnitin?", answer: "Parafraseo manual y profesional." },
+        { question: "¿Si cambian mi tema?", answer: "Nos adaptamos rápidamente." }
+      ]
+    }
   },
 ];
 

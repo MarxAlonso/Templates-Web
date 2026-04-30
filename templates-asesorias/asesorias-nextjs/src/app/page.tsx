@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Boton } from "@/components/Boton/Boton";
 import { Card } from "@/components/Card/Card";
 import { universidades } from "@/data/universidades";
@@ -5,7 +6,7 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div>
+    <div className={styles.home}>
       <section className={styles.hero}>
         <div className={styles.heroContainer}>
           <div className={styles.heroInfo}>
@@ -18,16 +19,30 @@ export default function Home() {
               de tesis hasta la sustentación, con expertos en normas APA, Turnitin y
               metodología para las principales universidades del Perú.
             </p>
-            <Boton href="#universidades" variante="primary">
-              Ver Universidades
-            </Boton>
+            <div className={styles.heroBtns}>
+              <Boton href="#universidades" variante="primary">
+                Ver Universidades
+              </Boton>
+              <Boton href="https://wa.me/51999999999" variante="whatsapp">
+                Asesoría WhatsApp
+              </Boton>
+            </div>
           </div>
           <div className={styles.heroVisual}>
-            <img
-              src="/imagenes/ucv/[H1] Tesis CESAR VALLEJO TESIS Guía estratégica para graduarte sin complicaciones.jfif"
-              alt="Asesoría de tesis profesional"
-              className={styles.heroImg}
-            />
+            <div className={styles.heroImgWrapper}>
+              <Image
+                src="/imagenes/ucv/ucv-hero.jfif"
+                alt="Asesoría de tesis profesional"
+                width={600}
+                height={400}
+                priority
+                className={styles.heroImg}
+              />
+            </div>
+            <div className={styles.heroBadge}>
+              <span className={styles.badgeNumber}>100%</span>
+              <span className={styles.badgeText}>Aprobación Garantizada</span>
+            </div>
           </div>
         </div>
       </section>
@@ -35,11 +50,12 @@ export default function Home() {
       <section className={styles.universidades} id="universidades">
         <div className={styles.container}>
           <header className={styles.sectionHeader}>
+            <span className={styles.sectionBadge}>Tu Meta Académica</span>
             <h2>
               Asesoría especializada para tu <strong>universidad</strong>
             </h2>
             <p>
-              Selecciona tu universidad y accede a contenido personalizado para tu
+              Selecciona tu universidad and accede a contenido personalizado para tu
               proceso de titulación.
             </p>
           </header>
@@ -47,12 +63,12 @@ export default function Home() {
           <div className={styles.grid}>
             {universidades.map((u) => (
               <a key={u.slug} href={`/${u.slug}`} className={styles.uniCard}>
-                <div className={styles.uniIcon} style={{ color: u.primaryColor }}>
+                <div className={styles.uniIcon} style={{ background: u.primaryColor + '15', color: u.primaryColor }}>
                   🎓
                 </div>
-                <h3>{u.nombre}</h3>
+                <h3>Tesis {u.nombre}</h3>
                 <p>{u.nombreCompleto}</p>
-                <span className={styles.uniLink}>Ver asesoría →</span>
+                <span className={styles.uniLink} style={{ color: u.primaryColor }}>Ver asesoría →</span>
               </a>
             ))}
           </div>
@@ -62,6 +78,7 @@ export default function Home() {
       <section className={styles.pilares}>
         <div className={styles.container}>
           <header className={styles.sectionHeader}>
+            <span className={styles.sectionBadge}>Nuestra Metodología</span>
             <h2>
               Nuestros <strong>tres pilares</strong> de éxito
             </h2>
@@ -88,18 +105,15 @@ export default function Home() {
 
       <section className={styles.cta}>
         <div className={styles.container}>
-          <h2>¿Listo para comenzar tu camino al grado académico?</h2>
-          <p>
-            Contáctanos hoy y recibe una evaluación gratuita de tu avance de tesis.
-          </p>
-          <Boton variante="whatsapp" href="https://wa.me/51999999999">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-              alt="WhatsApp"
-              style={{ width: "3rem" }}
-            />
-            Contactar por WhatsApp
-          </Boton>
+          <div className={styles.ctaCard}>
+            <h2>¿Listo para comenzar tu camino al grado académico?</h2>
+            <p>
+              Contáctanos hoy y recibe una evaluación gratuita de tu avance de tesis.
+            </p>
+            <Boton variante="whatsapp" href="https://wa.me/51999999999">
+              Chatear con un Asesor
+            </Boton>
+          </div>
         </div>
       </section>
     </div>
