@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FUENTE PUBLIC SANS -->
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<title>Tesis PUCP - Guía de Investigación</title>
+
+<!-- CSS SEPARADO POR BLOQUES -->
+<style>
+/* 1. VARIABLES Y RESET */
+:root {
+    --primary: #002D72; /* Azul PUCP */
+    --accent: #ff5c35;
+    --gold: #d4af37;
+    --dark: #1a2b3c;
+    --light-bg: #f4f7fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* 2. NAVEGACIÓN */
+.nav-tesis {
+    background: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top:0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.btn-nav {
+    background: var(--gold);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+/* 3. HERO SECTION */
+.hero-pucp {
+    position: relative;
+    padding: 100px 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.hero-main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.pre-title {
+    background: rgba(0,45,114,0.05);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: var(--primary);
+    display: inline-block;
+}
+
+.hero-info h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-top: 20px;
+    color: var(--dark);
+}
+
+.hero-info h1 strong {
+    color: var(--primary);
+}
+
+.hero-info p {
+    font-size: 18px;
+    color: #4a5568;
+    margin: 25px 0;
+}
+
+.btn-main {
+    background: var(--accent);
+    color: #fff;
+    padding: 18px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    display: inline-block;
+    box-shadow: 0 10px 20px rgba(255, 92, 53, 0.2);
+}
+
+.hero-visual-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.circle-bg {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: var(--primary);
+    border-radius: 50%;
+    top: -100px;
+    right: -100px;
+    z-index: 1;
+    opacity: 0.1;
+}
+
+.student-img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* 4. SECCIÓN CONTENIDO (SEO ESTRUCTURADO) */
+.content-section {
+    padding: 100px 20px;
+    background: var(--light-bg);
+}
+
+.container-mid {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content-section h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: var(--dark);
+}
+
+.content-section h2 strong {
+    color: var(--primary);
+}
+
+.content-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #4a5568;
+}
+
+/* 5. GRID DE COMPONENTES ADICIONALES */
+.metodologia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.metodo-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--primary);
+}
+
+.metodo-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+/* 6. FAQ ACORDEÓN */
+.faq-section {
+    padding: 100px 20px;
+    background: #fff;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #edf2f7;
+    padding: 20px 0;
+}
+
+summary {
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    font-size: 18px;
+    color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+}
+
+summary::after { content: '+'; }
+
+details[open] summary::after { content: '-'; }
+
+details p {
+    padding-top: 15px;
+    color: #4a5568;
+}
+.faq-img { width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+
+/* 7. SECCIÓN PERPLEJIDAD Y CONCLUSIÓN */
+.perplejidad-section {
+    padding: 100px 20px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.perplejidad-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0,45,114,0.03) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.perplejidad-section::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255,92,53,0.03) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.conclusion-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.conclusion-text {
+    padding: 40px;
+}
+
+.conclusion-text h2 {
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.conclusion-text p {
+    font-size: 18px;
+    color: #4a5568;
+    margin-bottom: 25px;
+}
+
+.conclusion-image-wrapper {
+    position: relative;
+}
+
+.conclusion-img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+}
+
+.floating-icon-box {
+    position: absolute;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 3;
+}
+
+.f-box-1 { top: -20px; left: -30px; border-left: 5px solid var(--accent); }
+.f-box-2 { bottom: -20px; right: -30px; border-left: 5px solid var(--primary); }
+
+.f-icon { font-size: 24px; }
+.f-info strong { display: block; font-size: 14px; color: var(--dark); }
+.f-info span { font-size: 12px; color: #777; }
+
+/* 8. FOOTER CTA */
+.footer-cta {
+    background: var(--dark);
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer-cta h2 { font-size: 36px; margin-bottom: 20px; }
+
+.btn-whatsapp {
+    background: #25d366;
+    color: #fff;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .hero-main-container { grid-template-columns: 1fr; text-align: center; }
+    .hero-info h1 { font-size: 36px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVEGACIÓN -->
+<nav class="nav-tesis">
+    <div class="nav-container">
+        <div class="logo">Devs<span>Codelab</span></div>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Tesis PUCP</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <a href="#cotizar" class="btn-nav">Empezar Tesis</a>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<header class="hero-pucp">
+    <div class="hero-main-container">
+        <div class="hero-info">
+            <span class="pre-title">Excelencia Académica PUCP</span>
+            <h1>¿Cómo sobrevivir a tu <strong>tesis PUCP</strong> sin morir en el intento?</h1>
+            <p>
+                Entendemos que la excelencia académica de la PUCP exige un esfuerzo extra. 
+                Estamos aquí para ser tus sherpas en esta expedición hacia el título profesional.
+            </p>
+            <a href="#cotizar" class="btn-main">Solicitar Asesoría PUCP</a>
+        </div>
+        <div class="hero-visual-wrapper">
+            <div class="circle-bg"></div>
+            <img src="imagenes/pucp/h1¿Cómo sobrevivir a tu tesis PUCP sin morir en el intento Una guía desde la investigación hasta la victoriah1.jfif" alt="Tesis PUCP - Guía de investigación y éxito académico" class="student-img">
+        </div>
+    </div>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="content-section">
+    <div class="container-mid">
+        <h2>La importancia de una estructura sólida: El cimiento de tu <strong>tesis PUCP</strong></h2>
+        <p>
+            Imagina que intentas construir un edificio en la Av. Universitaria sin planos. ¿Suena a desastre, verdad? 
+            Para dominar la <strong>tesis PUCP</strong>, el primer paso es entender que no se trata solo de escribir mucho, sino de escribir con propósito. 
+            Priorizamos la coherencia entre el problema, los objetivos y la metodología.
+        </p>
+        <img src="imagenes/pucp/h2La importancia de una estructura.jfif" alt="Estructura sólida de la tesis PUCP" class="student-img" style="max-width: 800px; margin: 20px auto; display: block;">
+
+        <div class="metodologia-grid">
+            <div class="metodo-card">
+                <h3>Rigor Académico</h3>
+                <p>Abordamos la densidad conceptual y la claridad metodológica que la PUCP exige para destacar en el repositorio.</p>
+            </div>
+            <div class="metodo-card">
+                <h3>Normas APA 7</h3>
+                <p>La precisión en las citas es lo que separa un trabajo mediocre de uno sobresaliente. Dominamos el formato oficial.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="https://wa.me/51999999999" class="btn-main">¡Empezar mi Plan de Tesis!</a>
+        </div>
+    </div>
+</main>
+
+<!-- SECCIÓN METODOLOGÍA -->
+<section class="content-section" style="background: #fff;">
+    <div class="container-mid">
+        <h2>Metodología de una <strong>tesis PUCP</strong>: ¿Cualitativa, cuantitativa o mixta?</h2>
+        <p>
+            Elegir la metodología es como elegir los ingredientes para un buen ceviche. 
+            Sea cual sea tu camino, te acompañamos para que el análisis de resultados sea la parte más brillante de tu trabajo. 
+            Cautiva a los jurados en tu sustentación con una narrativa fascinante.
+        </p>
+        <img src="imagenes/pucp/h2eMetodología de una tesis PUCP ¿Cualitativa,.jfif" alt="Metodología de investigación tesis PUCP" class="student-img" style="max-width: 800px; margin: 20px auto; display: block;">
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="https://wa.me/51999999999" class="btn-main" style="background: var(--primary);">Dominar mi Metodología</a>
+        </div>
+    </div>
+</section>
+
+<!-- NUEVA SECCIÓN: PERPLEJIDAD Y CONCLUSIÓN -->
+<section class="perplejidad-section">
+    <div class="conclusion-container">
+        
+        <div class="conclusion-image-wrapper">
+            <div class="floating-icon-box f-box-1">
+                <div class="f-icon">🚀</div>
+                <div class="f-info">
+                    <strong>Hito Académico</strong>
+                    <span>Investigación de impacto</span>
+                </div>
+            </div>
+
+            <img src="imagenes/pucp/h2Conclusión El final del camino y.jfif" alt="Conclusión y éxito de la tesis PUCP" class="conclusion-img">
+
+            <div class="floating-icon-box f-box-2">
+                <div class="f-icon">✨</div>
+                <div class="f-info">
+                    <strong>Narrativa Fascinante</strong>
+                    <span>Cautiva a tu jurado</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="conclusion-text">
+            <span style="color: var(--accent); font-weight: 800; text-transform: uppercase; letter-spacing: 2px;">Propuesta de Valor</span>
+            <h2>¿Por qué conformarse con lo básico cuando puedes marcar un hito?</h2>
+            <p>
+                La perplejidad en un texto académico —esa capacidad de presentar ideas complejas de forma fascinante— es lo que cautiva a los jurados en la <strong>sustentación de la tesis PUCP</strong>. 
+                Nosotros te enseñamos a tejer esa narrativa.
+            </p>
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
+
+            <h2>Conclusión: El final del camino y el inicio de tu carrera</h2>
+            <p>
+                En resumen, completar tu <strong>tesis PUCP</strong> es una prueba de resistencia, pero también de pasión. No es solo un requisito burocrático; es tu carta de presentación al mundo profesional. 
+                Creemos firmemente que con la asesoría correcta, el proceso deja de ser una carga y se convierte en un proyecto de vida emocionante.
+            </p>
+            
+            <strong style="font-size: 20px; color: var(--primary);">¿Estás listo para ver tu nombre en el grado académico que tanto anhelas?</strong>
+            
+            <div style="margin-top: 40px;">
+                <a href="https://wa.me/51999999999" class="btn-main">¡Lograr mi Grado Académico!</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PREGUNTAS FRECUENTES -->
+<section class="faq-section">
+    <div class="faq-container">
+        <h2 style="text-align:center; margin-bottom:40px;">Preguntas Frecuentes (FAQ)</h2>
+        
+        <div class="faq-item">
+            <details open>
+                <summary>1. ¿Cuál es el error más común al iniciar la tesis PUCP?</summary>
+                <div style="padding-top: 15px;">
+                    <img src="imagenes/pucp/1. ¿Cuál es el error más común al iniciar la tesis PUCP.jfif" alt="Errores comunes tesis PUCP" class="faq-img">
+                    <p>El error más frecuente es elegir un tema demasiado amplio. Recomendamos delimitar el problema de investigación para evitar perderse.</p>
+                </div>
+            </details>
+        </div>
+
+        <div class="faq-item">
+            <details>
+                <summary>2. ¿Cómo puedo acceder a los trabajos previos en el repositorio PUCP?</summary>
+                <div style="padding-top: 15px;">
+                    <img src="imagenes/pucp/2. ¿Cómo puedo acceder a los trabajos previos en el repositorio PUCP.jfif" alt="Repositorio tesis PUCP" class="faq-img">
+                    <p>Puedes acceder de forma virtual a través de la biblioteca de la universidad. Es vital revisar antecedentes similares para no "descubrir la pólvora".</p>
+                </div>
+            </details>
+        </div>
+
+        <div class="faq-item">
+            <details>
+                <summary>3. ¿Qué tan importante es tener un asesor de tesis en el proceso?</summary>
+                <div style="padding-top: 15px;">
+                    <img src="imagenes/pucp/3. ¿Qué tan importante es tener un asesor de tesis en el proceso de tu de tesis PUCP.jfif" alt="Asesor de tesis PUCP" class="faq-img">
+                    <p>Es fundamental. Un buen asesor es un mentor, y nuestras asesorías externas complementan perfectamente el rigor exigido por la facultad.</p>
+                </div>
+            </details>
+        </div>
+
+        <div class="faq-item">
+            <details>
+                <summary>4. ¿Cuánto tiempo suele tomar terminar una tesis PUCP?</summary>
+                <div style="padding-top: 15px;">
+                    <img src="imagenes/pucp/4. ¿Cuánto tiempo suele tomar terminar una tesis PUCP de pregrado.jfif" alt="Tiempo duración tesis PUCP" class="faq-img">
+                    <p>En promedio toma entre 8 meses y un año. Con un plan de trabajo estructurado, ese tiempo puede optimizarse considerablemente.</p>
+                </div>
+            </details>
+        </div>
+
+        <div class="faq-item">
+            <details>
+                <summary>5. ¿Qué pasa si mi tesis PUCP es rechazada por el jurado?</summary>
+                <div style="padding-top: 15px;">
+                    <img src="imagenes/pucp/5. ¿Qué pasa si mi tesis PUCP es rechazada por el jurado.jfif" alt="Rechazo y sustentación tesis PUCP" class="faq-img">
+                    <p>No es el fin del mundo. El jurado otorga observaciones que deben ser subsanadas con rapidez para asegurar el éxito.</p>
+                </div>
+            </details>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="https://wa.me/51999999999" class="btn-main">¡Resolver dudas por WhatsApp!</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER CTA -->
+<footer class="footer-cta">
+    <h2>¿Estás listo para iniciar tu camino al éxito?</h2>
+    <p>En resumen, completar tu tesis PUCP es una prueba de resistencia, pero también de pasión.</p>
+    <br>
+    <a href="#" class="btn-whatsapp">¡Contactar un Asesor Experto!</a>
+</footer>
+
+</body>
+</html>

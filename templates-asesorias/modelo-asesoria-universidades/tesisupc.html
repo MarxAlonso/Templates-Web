@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FUENTE PUBLIC SANS -->
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<title>Tesis UPC - Manual de Supervivencia</title>
+
+<!-- CSS SEPARADO POR BLOQUES -->
+<style>
+/* 1. VARIABLES Y RESET */
+:root {
+    --primary: #CC0000; /* Rojo UPC */
+    --accent: #ff5c35;
+    --gold: #d4af37;
+    --dark: #2d3e50;
+    --light-bg: #fdf2f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* 2. NAVEGACIÓN */
+.nav-tesis {
+    background: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top:0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.btn-nav {
+    background: var(--dark);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+/* 3. HERO SECTION */
+.hero-upc {
+    position: relative;
+    padding: 100px 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.hero-main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.pre-title {
+    background: rgba(204,0,0,0.05);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: var(--primary);
+    display: inline-block;
+}
+
+.hero-info h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-top: 20px;
+    color: var(--dark);
+}
+
+.hero-info h1 strong {
+    color: var(--primary);
+}
+
+.hero-info p {
+    font-size: 18px;
+    color: #666;
+    margin: 25px 0;
+}
+
+.btn-main {
+    background: var(--primary);
+    color: #fff;
+    padding: 18px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    display: inline-block;
+}
+
+.hero-visual-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.circle-bg {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: var(--primary);
+    border-radius: 50%;
+    top: -100px;
+    right: -100px;
+    z-index: 1;
+    opacity: 0.05;
+}
+
+.student-img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* 4. SECCIÓN MARATÓN (CONVERSION) */
+.conversion-section {
+    padding: 100px 20px;
+    background: #fff;
+}
+
+.container-mid {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.conversion-section h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+    color: var(--dark);
+    text-align: center;
+}
+
+.conversion-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+    text-align: center;
+}
+
+/* 5. PILARES EXITOSOS */
+.pilares-section {
+    padding: 100px 20px;
+    background: var(--light-bg);
+}
+
+.pilares-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.pilar-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--primary);
+}
+
+.pilar-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+/* 6. FAQ ACORDEÓN */
+.faq-section {
+    padding: 100px 20px;
+    background: #fff;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+}
+
+summary {
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    font-size: 18px;
+    color: var(--dark);
+    display: flex;
+    justify-content: space-between;
+}
+
+summary::after { content: '+'; color: var(--primary); }
+
+details[open] summary::after { content: '-'; }
+
+details p {
+    padding-top: 15px;
+    color: #666;
+}
+
+/* 7. FOOTER CTA */
+.footer-cta {
+    background: var(--dark);
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.btn-whatsapp {
+    background: #25d366;
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 22px;
+    margin-top: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .hero-main-container { grid-template-columns: 1fr; text-align: center; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVEGACIÓN -->
+<nav class="nav-tesis">
+    <div class="nav-container">
+        <div class="logo">Devs<span>Codelab</span></div>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Tesis UPC</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <a href="#cotizar" class="btn-nav">Empezar Tesis</a>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<header class="hero-upc">
+    <div class="hero-main-container">
+        <div class="hero-info">
+            <span class="pre-title">Manual de Supervivencia UPC</span>
+            <h1>Tesis <strong>Universidad UPC</strong>: El manual de supervivencia para alcanzar tu grado</h1>
+            <p>
+                ¿El Taller de Investigación de la UPC parece una tormenta? 
+                Somos tu GPS académico para dominar el Taller de Investigación y alcanzar tu meta.
+            </p>
+            <a href="#cotizar" class="btn-main">Solicitar Presupuesto UPC</a>
+        </div>
+        <div class="hero-visual-wrapper">
+            <div class="circle-bg"></div>
+            <img src="https://noticias.upc.edu.pe/wp-content/uploads/2022/05/IMG_5301-scaled.jpg" alt="Asesoría Tesis UPC" class="student-img">
+        </div>
+    </div>
+</header>
+
+<!-- SECCIÓN MARATÓN -->
+<section class="conversion-section">
+    <div class="container-mid">
+        <h2>¿Por qué la <strong>UPC tesis</strong> se siente como un maratón cuesta arriba?</h2>
+        <p>
+            En la UPC, el nivel de rigurosidad no es un mito. La estructura de la UPC tesis demanda una coherencia que no deja espacio para la improvisación. 
+            Si los cimientos están débiles, todo el proyecto se vendrá abajo al primer sismo de correcciones.
+        </p>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="https://wa.me/51999999999" class="btn-main">¡Superar mi Maratón Académico!</a>
+        </div>
+    </div>
+</section>
+
+<!-- PILARES DE ÉXITO -->
+<section class="pilares-section">
+    <div class="container-mid">
+        <h2 style="text-align:center; font-size:36px; color:var(--dark);">Los pilares de una <strong>tesis UPC</strong> exitosa</h2>
+        <div class="pilares-grid">
+            <div class="pilar-card">
+                <h3>Rigor Metodológico</h3>
+                <p>El motor de tu investigación. Tu enfoque será tan preciso como un reloj suizo. Hablamos el idioma de SPSS y Atlas.ti por ti.</p>
+            </div>
+            <div class="pilar-card">
+                <h3>Filtro de Turnitin</h3>
+                <p>Tu pase a la libertad. Tratamos tu UPC tesis con delicadeza quirúrgica, asegurando originalidad bajo normas APA.</p>
+            </div>
+            <div class="pilar-card">
+                <h3>Coherencia Interna</h3>
+                <p>Aseguramos que tus objetivos, problemas y conclusiones cierren el círculo perfectamente sin esfuerzo.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="https://wa.me/51999999999" class="btn-main" style="background: var(--dark);">Fortalecer mis Pilares</a>
+        </div>
+    </div>
+</section>
+
+<!-- ALIANZA ESTRATÉGICA -->
+<section class="conversion-section" style="background: #fff;">
+    <div class="container-mid">
+        <h2>Nuestra propuesta: Más que una asesoría, una <strong>alianza estratégica</strong></h2>
+        <p>
+            Nos subimos al barco contigo. Entendemos que cada carrera en la UPC tiene su propia personalidad. 
+            No usamos plantillas genéricas; tu investigación es única, igual que tu futuro profesional.
+        </p>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="https://wa.me/51999999999" class="btn-main">¡Iniciar mi Alianza Estratégica!</a>
+        </div>
+    </div>
+</section>
+
+<!-- PREGUNTAS FRECUENTES -->
+<section class="faq-section">
+    <div class="faq-container">
+        <h2 style="text-align:center; margin-bottom:40px;">Preguntas Frecuentes - Tesis UPC</h2>
+        
+        <div class="faq-item">
+            <details open>
+                <summary>1. ¿Cómo manejan los plazos urgentes para las entregas de la UPC?</summary>
+                <p>Nos adaptamos a tu calendario académico para que nunca llegues tarde a una entrega en el aula virtual.</p>
+            </details>
+        </div>
+
+        <div class="faq-item">
+            <details>
+                <summary>2. ¿Me ayudan si ya tengo observaciones de mi asesor de la UPC?</summary>
+                <p>¡Claro que sí! Analizamos las correcciones de tu asesor y ajustamos el documento para que cumpla con todas las expectativas.</p>
+            </details>
+        </div>
+
+        <div class="faq-item">
+            <details>
+                <summary>3. ¿Ustedes realizan el análisis estadístico de la tesis UPC?</summary>
+                <p>Así es. Contamos con especialistas que transformarán tus encuestas en resultados contundentes y gráficos profesionales.</p>
+            </details>
+        </div>
+
+        <div class="faq-item">
+            <details>
+                <summary>4. ¿La asesoría incluye simulacros de sustentación?</summary>
+                <p>Definitivamente. Te preparamos con ensayos y preguntas tipo para que tu oratoria esté a la altura de tu investigación.</p>
+            </details>
+        </div>
+
+        <div class="faq-item">
+            <details>
+                <summary>5. ¿Qué pasa si mi tesis universidad UPC tiene un alto porcentaje en Turnitin?</summary>
+                <p>Realizamos una reestructuración y parafraseo profundo, manteniendo el sentido original pero optimizando la redacción.</p>
+            </details>
+        </div>
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="https://wa.me/51999999999" class="btn-main">¡Consultar por WhatsApp!</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER CTA -->
+<footer class="footer-cta">
+    <h2>¿Listo para el último gran salto?</h2>
+    <p>La tesis universidad UPC es la mejor vitrina de tus capacidades. ¡Estamos aquí para transformar el caos en impacto!</p>
+    <a href="https://wa.me/51999999999" class="btn-whatsapp">¡Empezar mi Tesis UPC ahora!</a>
+</footer>
+
+</body>
+</html>

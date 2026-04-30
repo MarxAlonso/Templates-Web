@@ -1,0 +1,35 @@
+.card {
+  background: var(--white);
+  padding: 4rem 3rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 1px solid var(--gray-200);
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.card:hover {
+  transform: translateY(-1rem);
+  box-shadow: var(--shadow-md);
+  border-color: var(--card-acento, var(--accent));
+}
+
+.icono {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+.titulo {
+  font-size: 2rem;
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.descripcion {
+  font-size: 1.5rem;
+  color: var(--gray-800);
+  line-height: 1.6;
+}

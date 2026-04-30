@@ -1,0 +1,120 @@
+.section {
+  padding: 10rem 2rem;
+  background: var(--white);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 8rem;
+}
+
+.support h3 {
+  font-size: 2.8rem;
+  color: var(--dark);
+  margin-bottom: 2rem;
+}
+
+.support > p {
+  font-size: 1.6rem;
+  color: var(--gray-800);
+  margin-bottom: 2rem;
+}
+
+.supportLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sLink {
+  display: block;
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.6rem;
+  transition: opacity 0.3s;
+}
+
+.sLink:hover {
+  opacity: 0.7;
+}
+
+.teamFaces {
+  display: flex;
+  margin-top: 3rem;
+}
+
+.teamFaces img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 0.3rem solid var(--white);
+  box-shadow: var(--shadow-sm);
+  margin-right: -1.5rem;
+  object-fit: cover;
+}
+
+.accordion h2 {
+  font-size: 3.2rem;
+  margin-bottom: 4rem;
+  color: var(--dark);
+}
+
+.accordion h2 strong {
+  color: var(--primary);
+}
+
+.accordionItem {
+  border-bottom: 1px solid var(--gray-200);
+  padding: 2rem 0;
+}
+
+.faqSummary {
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  color: var(--accent);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.faqSummary::after {
+  content: "+";
+  font-size: 2.4rem;
+  color: var(--gray-500);
+  transition: transform 0.3s;
+}
+
+.accordionItem details[open] .faqSummary::after {
+  content: "−";
+}
+
+.answer {
+  padding-top: 1.5rem;
+}
+
+.faqImg {
+  width: 100%;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.answer p {
+  color: var(--gray-800);
+  line-height: 1.6;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}

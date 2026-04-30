@@ -1,0 +1,41 @@
+.section {
+  padding: 8rem 2rem;
+  background: var(--gray-100);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.header h2 {
+  font-size: 3.6rem;
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+}
+
+.header h2 strong {
+  color: var(--accent);
+}
+
+.header p {
+  font-size: 1.8rem;
+  color: var(--gray-800);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  gap: 3rem;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
