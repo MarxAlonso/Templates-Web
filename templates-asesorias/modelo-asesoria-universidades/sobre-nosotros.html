@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Conoce al equipo detrás de la mejor asesoría de tesis universitarias del Perú. Expertos en UCV, PUCP, UPC, metodología, APA 7 y Turnitin.">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Sobre Nosotros | Asesoría de Tesis DevsCodel ab</title>
+<style>
+:root{--primary:#00bfaf;--accent:#ff5c35;--gold:#d4af37;--dark:#2d3e50;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Public Sans',sans-serif;color:var(--dark);line-height:1.6;}
+a{text-decoration:none;}
+.container{max-width:1200px;margin:0 auto;padding:0 20px;}
+
+/* NAV */
+.nav-tesis{background:#fff;padding:18px 0;border-bottom:1px solid #eee;position:sticky;top:0;z-index:1000;}
+.nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px;}
+.logo{font-size:22px;font-weight:800;color:var(--dark);}
+.logo span{color:var(--primary);}
+.nav-links{list-style:none;display:flex;gap:28px;}
+.nav-links a{color:var(--dark);font-weight:500;font-size:15px;transition:.3s;}
+.nav-links a:hover{color:var(--primary);}
+.dropdown{position:relative;}
+.dropdown-content{display:none;position:absolute;top:130%;background:#fff;min-width:200px;box-shadow:0 8px 24px rgba(0,0,0,.1);border-radius:10px;overflow:hidden;}
+.dropdown-content a{padding:12px 16px;display:block;font-size:14px;border-bottom:1px solid #f4f4f4;color:var(--dark);}
+.dropdown:hover .dropdown-content{display:block;}
+.btn-nav{background:var(--gold);color:#fff;padding:12px 26px;border-radius:8px;font-weight:700;transition:.3s;}
+.btn-nav:hover{background:#b8962e;}
+
+/* HERO SOBRE NOSOTROS */
+.hero-sn{padding:90px 20px 60px;background:linear-gradient(135deg,#2d3e50 0%,#1e2f3d 100%);color:#fff;text-align:center;position:relative;overflow:hidden;}
+.hero-sn::before{content:'';position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(0,191,175,.15) 0%,transparent 70%);border-radius:50%;top:-200px;left:50%;transform:translateX(-50%);}
+.hero-sn .pre-title{background:rgba(0,191,175,.2);color:var(--primary);padding:6px 18px;border-radius:20px;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;display:inline-block;margin-bottom:20px;}
+.hero-sn h1{font-size:52px;font-weight:800;line-height:1.1;margin-bottom:20px;position:relative;z-index:1;}
+.hero-sn h1 strong{color:var(--primary);}
+.hero-sn p{font-size:18px;color:#a8bfd0;max-width:640px;margin:0 auto 40px;position:relative;z-index:1;}
+.btn-cta{background:var(--accent);color:#fff;padding:16px 34px;border-radius:8px;font-weight:700;font-size:16px;display:inline-block;box-shadow:0 8px 20px rgba(255,92,53,.3);transition:.3s;}
+.btn-cta:hover{transform:translateY(-2px);}
+
+/* MISIÓN VISIÓN */
+.mv-section{padding:80px 20px;background:#f8fffe;}
+.mv-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;}
+.mv-card{background:#fff;border-radius:20px;padding:40px 30px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.05);border-top:5px solid var(--primary);transition:.3s;}
+.mv-card:nth-child(2){border-top-color:var(--accent);}
+.mv-card:nth-child(3){border-top-color:var(--gold);}
+.mv-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.1);}
+.mv-icon{font-size:42px;margin-bottom:16px;}
+.mv-card h3{font-size:20px;font-weight:800;margin-bottom:12px;}
+.mv-card p{font-size:15px;color:#666;}
+
+/* HISTORIA */
+.historia-section{padding:80px 20px;background:#fff;}
+.historia-inner{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+.historia-text .tag{color:var(--accent);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:12px;}
+.historia-text h2{font-size:40px;font-weight:800;line-height:1.1;margin-bottom:20px;}
+.historia-text h2 strong{color:var(--primary);}
+.historia-text p{font-size:16px;color:#555;margin-bottom:18px;}
+.logros-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px;}
+.logro{background:#f7fdfc;border-radius:12px;padding:20px;border-left:4px solid var(--primary);}
+.logro strong{display:block;font-size:26px;font-weight:800;color:var(--primary);}
+.logro span{font-size:13px;color:#666;}
+.historia-visual{position:relative;}
+.visual-card-main{background:linear-gradient(135deg,var(--primary) 0%,#00a896 100%);border-radius:24px;padding:50px 40px;color:#fff;text-align:center;}
+.visual-card-main .num{font-size:72px;font-weight:800;display:block;}
+.visual-card-main p{font-size:16px;opacity:.9;margin-top:8px;}
+.floating-badge{position:absolute;background:#fff;border-radius:14px;padding:16px 20px;box-shadow:0 12px 30px rgba(0,0,0,.12);display:flex;align-items:center;gap:12px;}
+.fb-1{bottom:-20px;left:-20px;}
+.fb-2{top:-20px;right:-20px;}
+.fb-icon{font-size:26px;}
+.fb-text strong{display:block;font-size:14px;color:var(--dark);}
+.fb-text span{font-size:12px;color:#888;}
+
+/* VALORES */
+.valores-section{padding:80px 20px;background:#fcfcfc;}
+.section-title{text-align:center;margin-bottom:50px;}
+.section-title h2{font-size:36px;font-weight:800;}
+.section-title h2 strong{color:var(--accent);}
+.section-title p{font-size:16px;color:#666;margin-top:10px;}
+.valores-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
+.valor-card{background:#fff;border-radius:16px;padding:34px 26px;box-shadow:0 6px 20px rgba(0,0,0,.05);transition:.3s;border:1px solid #eee;}
+.valor-card:hover{border-color:var(--primary);transform:translateY(-5px);}
+.valor-num{font-size:13px;font-weight:800;color:var(--primary);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;}
+.valor-card h3{font-size:18px;font-weight:700;margin-bottom:10px;}
+.valor-card p{font-size:14px;color:#666;line-height:1.6;}
+
+/* EQUIPO */
+.equipo-section{padding:80px 20px;background:#fff;}
+.equipo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;}
+.miembro-card{text-align:center;transition:.3s;}
+.miembro-card:hover{transform:translateY(-6px);}
+.avatar{width:100px;height:100px;border-radius:50%;margin:0 auto 16px;border:4px solid var(--primary);overflow:hidden;background:var(--primary);display:flex;align-items:center;justify-content:center;font-size:36px;}
+.miembro-card h3{font-size:17px;font-weight:700;margin-bottom:4px;}
+.miembro-card .role{font-size:13px;color:var(--primary);font-weight:600;margin-bottom:8px;}
+.miembro-card p{font-size:13px;color:#666;}
+
+/* POR QUÉ ELEGIRNOS */
+.porque-section{padding:80px 20px;background:linear-gradient(135deg,var(--dark) 0%,#1a252f 100%);color:#fff;}
+.porque-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
+.porque-item{display:flex;gap:18px;align-items:flex-start;}
+.porque-icon{width:52px;height:52px;border-radius:12px;background:rgba(0,191,175,.15);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+.porque-item h3{font-size:16px;font-weight:700;margin-bottom:6px;}
+.porque-item p{font-size:14px;color:#8fa3b8;line-height:1.6;}
+
+/* CTA FOOTER */
+.cta-footer{background:var(--primary);padding:80px 20px;text-align:center;color:#fff;}
+.cta-footer h2{font-size:38px;font-weight:800;margin-bottom:14px;}
+.cta-footer h2 strong{color:var(--gold);}
+.cta-footer p{font-size:17px;opacity:.9;margin-bottom:30px;}
+.btn-wa{background:#25d366;color:#fff;padding:18px 40px;border-radius:50px;font-size:20px;font-weight:800;display:inline-flex;align-items:center;gap:10px;box-shadow:0 10px 30px rgba(37,211,102,.3);transition:.3s;}
+.btn-wa:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(37,211,102,.4);}
+.btn-wa img{width:28px;}
+
+/* RESPONSIVE */
+@media(max-width:992px){
+  .mv-grid{grid-template-columns:1fr;}
+  .historia-inner{grid-template-columns:1fr;}
+  .historia-visual{display:none;}
+  .hero-sn h1{font-size:36px;}
+}
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .logros-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVEGACIÓN -->
+<nav class="nav-tesis">
+  <div class="nav-container">
+    <div class="logo">Devs<span>Codelab</span></div>
+    <ul class="nav-links">
+      <li><a href="inicio.html">Inicio</a></li>
+      <li class="dropdown">
+        <a href="#">Universidades ▼</a>
+        <div class="dropdown-content">
+          <a href="inicioucv.html">Tesis UCV</a>
+          <a href="tesispucp.html">Tesis PUCP</a>
+          <a href="tesisupc.html">Tesis UPC</a>
+          <a href="#">Tesis UNMSM</a>
+        </div>
+      </li>
+      <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+      <li><a href="#">Precios</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+    <a href="https://wa.me/51999999999" class="btn-nav">Empezar Tesis</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero-sn">
+  <div class="container">
+    <span class="pre-title">✦ Nuestro equipo · Nuestra historia</span>
+    <h1>Somos tu equipo de <strong>asesoría de tesis</strong><br>más comprometido del Perú</h1>
+    <p>Más de 5 años transformando el proceso de titulación universitaria en una experiencia exitosa y sin estrés para miles de estudiantes.</p>
+    <a href="https://wa.me/51999999999" class="btn-cta">Habla con nuestro equipo →</a>
+  </div>
+</header>
+
+<!-- MISIÓN VISIÓN PROPÓSITO -->
+<section class="mv-section">
+  <div class="container">
+    <div class="mv-grid">
+      <div class="mv-card">
+        <div class="mv-icon">🎯</div>
+        <h3>Nuestra Misión</h3>
+        <p>Democratizar el acceso a asesoría académica de calidad, acompañando a cada estudiante —sin importar su universidad o carrera— a obtener su grado con confianza y rigor metodológico.</p>
+      </div>
+      <div class="mv-card">
+        <div class="mv-icon">🔭</div>
+        <h3>Nuestra Visión</h3>
+        <p>Ser la agencia de asesoría de tesis más reconocida del Perú, referente en excelencia académica, ética profesional y resultados medibles que transforman vidas universitarias.</p>
+      </div>
+      <div class="mv-card">
+        <div class="mv-icon">💡</div>
+        <h3>Nuestro Propósito</h3>
+        <p>Creemos que cada estudiante merece completar su tesis con orgullo. Convertimos el proceso de investigación —desde el plan de tesis hasta la sustentación— en un hito memorable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORIA Y LOGROS -->
+<section class="historia-section">
+  <div class="container">
+    <div class="historia-inner">
+      <div class="historia-text">
+        <span class="tag">📖 Nuestra historia</span>
+        <h2>De tesistas frustrados a <strong>expertos en investigación</strong></h2>
+        <p>Comenzamos en 2019 como un pequeño equipo de egresados que vivieron en carne propia la desesperación de la tesis: el cursor parpadeando frente a la hoja en blanco, el Turnitin que no baja y el asesor que tarda semanas en responder.</p>
+        <p>Entendimos que el problema no era la falta de capacidad de los estudiantes, sino la falta de acompañamiento especializado. Hoy somos un equipo de más de 20 asesores multidisciplinarios, cubriendo todas las universidades del Perú con una metodología probada.</p>
+        <div class="logros-grid">
+          <div class="logro"><strong>+800</strong><span>Tesis aprobadas</span></div>
+          <div class="logro"><strong>+20</strong><span>Asesores expertos</span></div>
+          <div class="logro"><strong>5 años</strong><span>De experiencia</span></div>
+          <div class="logro"><strong>98%</strong><span>Satisfacción</span></div>
+        </div>
+      </div>
+      <div class="historia-visual">
+        <div class="visual-card-main">
+          <span class="num">800+</span>
+          <p>Estudiantes graduados con nuestra asesoría de tesis en UCV, PUCP, UPC y más</p>
+        </div>
+        <div class="floating-badge fb-1">
+          <div class="fb-icon">🛡️</div>
+          <div class="fb-text"><strong>Turnitin &lt;20%</strong><span>Garantizado siempre</span></div>
+        </div>
+        <div class="floating-badge fb-2">
+          <div class="fb-icon">⚡</div>
+          <div class="fb-text"><strong>15 días</strong><span>Plan de tesis listo</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALORES -->
+<section class="valores-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Los valores que nos <strong>definen</strong></h2>
+      <p>Principios que guían cada asesoría, cada corrección y cada sustentación.</p>
+    </div>
+    <div class="valores-grid">
+      <div class="valor-card">
+        <div class="valor-num">01</div>
+        <h3>Rigor Metodológico</h3>
+        <p>Cada tesis que asesoramos cumple con los estándares científicos: diseño sólido, variables claras, análisis estadístico correcto y coherencia interna de principio a fin.</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-num">02</div>
+        <h3>Ética Académica</h3>
+        <p>Trabajamos con integridad. Asesoramos, orientamos y corregimos —nunca reemplazamos tu autoría. Tu tesis es tuya, nosotros la hacemos brillar.</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-num">03</div>
+        <h3>Confidencialidad Total</h3>
+        <p>Tu proyecto, tus datos y tu información están protegidos bajo contratos de confidencialidad. Nunca compartimos tu trabajo ni lo usamos como referencia.</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-num">04</div>
+        <h3>Acompañamiento Real</h3>
+        <p>No somos un servicio de "entregar y olvidar". Te acompañamos desde el plan de tesis hasta el día de tu sustentación, resolviendo dudas en tiempo real.</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-num">05</div>
+        <h3>Resultados Garantizados</h3>
+        <p>Nos comprometemos con resultados concretos: Turnitin menor al 20%, aprobación del plan en 15 días y preparación completa para tu defensa ante el jurado.</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-num">06</div>
+        <h3>Especialización por Universidad</h3>
+        <p>Conocemos el reglamento de la UCV, PUCP, UPC, UNMSM y más. Cada asesor está especializado en la normativa específica de tu institución académica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPO -->
+<section class="equipo-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Conoce a <strong>nuestro equipo</strong></h2>
+      <p>Asesores con maestrías y doctorados especializados en tu área de estudio.</p>
+    </div>
+    <div class="equipo-grid">
+      <div class="miembro-card">
+        <div class="avatar">👨‍🔬</div>
+        <h3>Mg. Alexander R.</h3>
+        <div class="role">Metodología e Investigación</div>
+        <p>Especialista en diseño de investigación cuantitativa, SPSS y normas APA 7ma edición para UCV y PUCP.</p>
+      </div>
+      <div class="miembro-card">
+        <div class="avatar">👩‍⚕️</div>
+        <h3>Dra. Samantha V.</h3>
+        <div class="role">Ciencias de la Salud</div>
+        <p>Experta en tesis de Enfermería, Psicología y Estomatología. Normas Vancouver y APA para universidades nacionales.</p>
+      </div>
+      <div class="miembro-card">
+        <div class="avatar">👨‍💼</div>
+        <h3>Mg. Raimo C.</h3>
+        <div class="role">Control Turnitin y Redacción</div>
+        <p>Máster en parafraseo académico y reducción de similitud. Garantiza índices menores al 20% con reporte oficial.</p>
+      </div>
+      <div class="miembro-card">
+        <div class="avatar">👩‍💻</div>
+        <h3>Mg. Lucia P.</h3>
+        <div class="role">Ingeniería y Tecnología</div>
+        <p>Especialista en tesis de Ingeniería Industrial, Civil y Sistemas. Metodologías ágiles y análisis de datos avanzado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ ELEGIRNOS -->
+<section class="porque-section">
+  <div class="container">
+    <div class="section-title" style="margin-bottom:50px;">
+      <h2 style="color:#fff;">¿Por qué elegir nuestra <strong style="color:var(--primary)">asesoría de tesis</strong>?</h2>
+      <p style="color:#8fa3b8;">Lo que nos diferencia de cualquier otra opción en el mercado.</p>
+    </div>
+    <div class="porque-grid">
+      <div class="porque-item">
+        <div class="porque-icon">🎓</div>
+        <div>
+          <h3>Asesores con grado académico</h3>
+          <p>Todos nuestros asesores cuentan con maestría o doctorado y experiencia activa en investigación científica.</p>
+        </div>
+      </div>
+      <div class="porque-item">
+        <div class="porque-icon">⚡</div>
+        <div>
+          <h3>Respuesta en menos de 1 hora</h3>
+          <p>Atención por WhatsApp de lunes a sábado. Sin tiempos de espera que frustren tu avance académico.</p>
+        </div>
+      </div>
+      <div class="porque-item">
+        <div class="porque-icon">📊</div>
+        <div>
+          <h3>Análisis estadístico profesional</h3>
+          <p>SPSS, Atlas.ti, AMOS. Convertimos tus datos en resultados irrebatibles ante cualquier jurado universitario.</p>
+        </div>
+      </div>
+      <div class="porque-item">
+        <div class="porque-icon">🔄</div>
+        <div>
+          <h3>Revisiones ilimitadas</h3>
+          <p>Corregimos hasta que tu asesor quede satisfecho. Sin cobros adicionales por cada ajuste o levantamiento de observaciones.</p>
+        </div>
+      </div>
+      <div class="porque-item">
+        <div class="porque-icon">🏛️</div>
+        <div>
+          <h3>Expertos por universidad</h3>
+          <p>Conocemos el reglamento específico de cada casa de estudios: UCV, PUCP, UPC, UNMSM, UTP y más.</p>
+        </div>
+      </div>
+      <div class="porque-item">
+        <div class="porque-icon">🤝</div>
+        <div>
+          <h3>Preparación para sustentación</h3>
+          <p>Simulacros de preguntas, diapositivas y oratoria. Llegarás ante el jurado con total confianza y dominio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FOOTER -->
+<footer class="cta-footer">
+  <h2>Listos para <strong>empezar contigo</strong></h2>
+  <p>Escríbenos hoy y recibe tu cotización gratuita en menos de 10 minutos. Tu graduación nos importa tanto como a ti.</p>
+  <a href="https://wa.me/51999999999" class="btn-wa">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    ¡Hablar con un Asesor Ahora!
+  </a>
+</footer>
+
+</body>
+</html>

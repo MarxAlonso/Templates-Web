@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Asesoría de tesis para UCV, PUCP, UPC y más universidades del Perú. Turnitin bajo, APA 7, metodología, sustentación. ¡Cotiza gratis!">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Asesoría de Tesis Universitarias Perú | DevsCodel ab</title>
+<style>
+:root{--primary:#00bfaf;--accent:#ff5c35;--gold:#d4af37;--dark:#2d3e50;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Public Sans',sans-serif;color:var(--dark);}
+a{text-decoration:none;}
+
+/* NAV */
+.nav-tesis{background:#fff;padding:18px 0;border-bottom:1px solid #eee;position:sticky;top:0;z-index:1000;}
+.nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px;}
+.logo{font-size:22px;font-weight:800;color:var(--dark);}
+.logo span{color:var(--primary);}
+.nav-links{list-style:none;display:flex;gap:28px;}
+.nav-links a{color:var(--dark);font-weight:500;font-size:15px;transition:.3s;}
+.nav-links a:hover{color:var(--primary);}
+.dropdown{position:relative;}
+.dropdown-content{display:none;position:absolute;top:130%;background:#fff;min-width:200px;box-shadow:0 8px 24px rgba(0,0,0,.1);border-radius:10px;overflow:hidden;}
+.dropdown-content a{padding:12px 16px;display:block;font-size:14px;border-bottom:1px solid #f4f4f4;color:var(--dark);}
+.dropdown:hover .dropdown-content{display:block;}
+.btn-nav{background:var(--gold);color:#fff;padding:12px 26px;border-radius:8px;font-weight:700;transition:.3s;}
+.btn-nav:hover{background:#b8962e;}
+
+/* HERO */
+.hero{padding:90px 20px;background:linear-gradient(135deg,#f8fffe 0%,#fff 60%);overflow:hidden;position:relative;}
+.hero::before{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(0,191,175,.12) 0%,transparent 70%);border-radius:50%;top:-100px;right:-80px;pointer-events:none;}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.pre-title{background:rgba(0,191,175,.1);color:var(--primary);padding:6px 16px;border-radius:20px;font-weight:700;font-size:13px;display:inline-block;margin-bottom:18px;letter-spacing:.5px;text-transform:uppercase;}
+.hero h1{font-size:50px;line-height:1.1;margin-bottom:22px;}
+.hero h1 strong{color:var(--primary);}
+.hero p{font-size:17px;color:#555;line-height:1.7;margin-bottom:30px;max-width:480px;}
+.btn-cta{background:var(--accent);color:#fff;padding:16px 34px;border-radius:8px;font-weight:700;font-size:17px;display:inline-block;box-shadow:0 8px 20px rgba(255,92,53,.25);transition:.3s;}
+.btn-cta:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(255,92,53,.35);}
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center;}
+.hero-circle{width:420px;height:420px;background:var(--primary);border-radius:50%;opacity:.08;position:absolute;}
+.stats-row{display:flex;gap:30px;margin-top:40px;}
+.stat{text-align:center;}
+.stat strong{display:block;font-size:32px;font-weight:800;color:var(--primary);}
+.stat span{font-size:13px;color:#777;font-weight:500;}
+
+/* UNIVERSIDADES */
+.unis-section{padding:80px 20px;background:#fcfcfc;}
+.section-title{text-align:center;margin-bottom:50px;}
+.section-title h2{font-size:36px;}
+.section-title h2 strong{color:var(--accent);}
+.section-title p{font-size:16px;color:#666;margin-top:10px;}
+.container{max-width:1200px;margin:0 auto;}
+.unis-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;}
+.uni-card{background:#fff;border-radius:20px;padding:36px 28px;text-align:center;border:1px solid #eee;box-shadow:0 6px 20px rgba(0,0,0,.04);transition:.3s;position:relative;overflow:hidden;}
+.uni-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:4px;background:var(--primary);transform:scaleX(0);transition:.3s;}
+.uni-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.09);}
+.uni-card:hover::after{transform:scaleX(1);}
+.uni-icon{font-size:40px;margin-bottom:16px;}
+.uni-card h3{font-size:20px;font-weight:800;margin-bottom:10px;}
+.uni-card p{font-size:14px;color:#666;line-height:1.6;}
+.uni-badge{display:inline-block;margin-top:14px;font-size:12px;font-weight:700;color:var(--primary);background:rgba(0,191,175,.1);padding:4px 12px;border-radius:20px;}
+
+/* SERVICIOS */
+.services-section{padding:80px 20px;background:#fff;}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;}
+.svc-card{background:#f7fdfc;border-radius:16px;padding:30px 24px;border-left:5px solid var(--primary);transition:.3s;}
+.svc-card:hover{background:#edfaf8;transform:translateX(4px);}
+.svc-card h3{font-size:17px;font-weight:700;margin-bottom:10px;}
+.svc-card p{font-size:14px;color:#666;line-height:1.6;}
+.svc-icon{font-size:30px;margin-bottom:12px;}
+
+/* PROCESO */
+.proceso-section{padding:80px 20px;background:linear-gradient(135deg,#2d3e50 0%,#1a252f 100%);color:#fff;}
+.proceso-section .section-title h2{color:#fff;}
+.proceso-section .section-title p{color:#aab8c8;}
+.proceso-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;counter-reset:step;}
+.step{text-align:center;position:relative;}
+.step-num{width:60px;height:60px;border-radius:50%;background:var(--primary);color:#fff;font-size:22px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
+.step h3{font-size:16px;font-weight:700;margin-bottom:8px;}
+.step p{font-size:13px;color:#8fa3b8;}
+
+/* FAQ */
+.faq-section{padding:80px 20px;background:#fff;}
+.faq-wrap{max-width:800px;margin:0 auto;}
+.accordion-item{border-bottom:1px solid #eee;padding:18px 0;}
+summary{font-size:16px;font-weight:600;cursor:pointer;list-style:none;color:var(--accent);display:flex;justify-content:space-between;align-items:center;}
+summary::after{content:'+';font-size:22px;color:#ccc;flex-shrink:0;}
+details[open] summary::after{content:'-';}
+details p{padding-top:12px;color:#555;line-height:1.7;font-size:15px;}
+
+/* CTA FOOTER */
+.cta-footer{background:var(--primary);padding:80px 20px;text-align:center;color:#fff;}
+.cta-footer h2{font-size:38px;margin-bottom:14px;}
+.cta-footer h2 strong{color:var(--gold);}
+.cta-footer p{font-size:17px;margin-bottom:30px;opacity:.9;}
+.btn-wa{background:#25d366;color:#fff;padding:18px 40px;border-radius:50px;font-size:20px;font-weight:800;display:inline-flex;align-items:center;gap:10px;box-shadow:0 10px 30px rgba(37,211,102,.3);transition:.3s;}
+.btn-wa:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(37,211,102,.4);}
+.btn-wa img{width:28px;}
+
+/* RESPONSIVE */
+@media(max-width:992px){
+  .hero-inner{grid-template-columns:1fr;text-align:center;}
+  .hero p{max-width:100%;}
+  .stats-row{justify-content:center;}
+  .hero-visual{display:none;}
+}
+@media(max-width:768px){
+  .hero h1{font-size:34px;}
+  .nav-links{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVEGACIÓN -->
+<nav class="nav-tesis">
+  <div class="nav-container">
+    <div class="logo">Devs<span>Codelab</span></div>
+    <ul class="nav-links">
+      <li><a href="inicio.html">Inicio</a></li>
+      <li class="dropdown">
+        <a href="#">Universidades ▼</a>
+        <div class="dropdown-content">
+          <a href="inicioucv.html">Tesis UCV</a>
+          <a href="tesispucp.html">Tesis PUCP</a>
+          <a href="tesisupc.html">Tesis UPC</a>
+          <a href="#">Tesis UNMSM</a>
+        </div>
+      </li>
+      <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+      <li><a href="#">Precios</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+    <a href="https://wa.me/51999999999" class="btn-nav">Empezar Tesis</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-info">
+      <span class="pre-title">🎓 Asesoría especializada en investigación académica</span>
+      <h1>Tu <strong>asesoría de tesis</strong> con expertos en todas las universidades del Perú</h1>
+      <p>Desde el plan de tesis hasta la sustentación final. Turnitin bajo garantizado, formato APA 7, análisis estadístico con SPSS y acompañamiento integral para que logres tu grado académico.</p>
+      <a href="https://wa.me/51999999999" class="btn-cta">Solicitar Presupuesto Gratis →</a>
+      <div class="stats-row">
+        <div class="stat"><strong>+800</strong><span>Tesis aprobadas</span></div>
+        <div class="stat"><strong>&lt;20%</strong><span>Turnitin garantizado</span></div>
+        <div class="stat"><strong>15 días</strong><span>Plan de tesis</span></div>
+        <div class="stat"><strong>100%</strong><span>Confidencial</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-circle"></div>
+    </div>
+  </div>
+</header>
+
+<!-- UNIVERSIDADES -->
+<section class="unis-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Asesoría para tu <strong>universidad</strong></h2>
+      <p>Conocemos el reglamento, los formatos y las exigencias de cada casa de estudios.</p>
+    </div>
+    <div class="unis-grid">
+      <article class="uni-card">
+        <div class="uni-icon">🏛️</div>
+        <h3>Tesis UCV</h3>
+        <p>Asesoría integral para la tesis Universidad César Vallejo. APA 7, Turnitin &lt;20%, matriz de consistencia y sustentación.</p>
+        <a href="inicioucv.html" class="uni-badge">Ver Asesoría UCV →</a>
+      </article>
+      <article class="uni-card">
+        <div class="uni-icon">🎓</div>
+        <h3>Tesis PUCP</h3>
+        <p>Acompañamiento para la tesis PUCP con rigor metodológico, repositorio PUCP y preparación ante el jurado.</p>
+        <a href="tesispucp.html" class="uni-badge">Ver Asesoría PUCP →</a>
+      </article>
+      <article class="uni-card">
+        <div class="uni-icon">🔬</div>
+        <h3>Tesis UPC</h3>
+        <p>Expertos en Taller de Investigación UPC. Normas APA, coherencia interna y análisis estadístico con SPSS.</p>
+        <a href="tesisupc.html" class="uni-badge">Ver Asesoría UPC →</a>
+      </article>
+      <article class="uni-card">
+        <div class="uni-icon">📚</div>
+        <h3>Tesis UNMSM</h3>
+        <p>Asesoría para San Marcos con enfoque en investigación científica, repositorio SISBIB y normas Vancouver.</p>
+        <span class="uni-badge">Próximamente</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="services-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Lo que hacemos por tu <strong>investigación</strong></h2>
+      <p>Un equipo multidisciplinario que cubre todas las etapas de tu tesis.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card">
+        <div class="svc-icon">📋</div>
+        <h3>Plan de Tesis</h3>
+        <p>Título, problema, objetivos, hipótesis y matriz de consistencia. Aprobación rápida en 15 días.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🧪</div>
+        <h3>Metodología</h3>
+        <p>Diseño de investigación cuantitativa, cualitativa o mixta. SPSS, Atlas.ti y análisis estadístico profesional.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🛡️</div>
+        <h3>Control Turnitin</h3>
+        <p>Reducción de similitud, parafraseo experto y citas correctas bajo APA 7ma edición. Garantizamos &lt;20%.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">📝</div>
+        <h3>Redacción Académica</h3>
+        <p>Marco teórico, antecedentes, resultados y discusión. Redacción de alto nivel con coherencia académica.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🎤</div>
+        <h3>Preparación Sustentación</h3>
+        <p>Simulacros de preguntas, diapositivas impactantes y tips de oratoria para dominar al jurado.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🔁</div>
+        <h3>Levantamiento Observaciones</h3>
+        <p>¿Tu tesis fue rechazada? Corregimos observaciones del asesor o jurado con rapidez y precisión.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="proceso-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>¿Cómo funciona nuestra <strong style="color:var(--primary)">asesoría</strong>?</h2>
+      <p>Cuatro pasos simples para transformar tu proyecto en un título universitario.</p>
+    </div>
+    <div class="proceso-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Consulta Gratis</h3>
+        <p>Evaluamos tu avance actual y te damos un plan de acción personalizado sin costo.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Asignación de Experto</h3>
+        <p>Te asignamos un asesor especialista en tu carrera y universidad específica.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Desarrollo y Revisión</h3>
+        <p>Trabajamos juntos en cada capítulo con retroalimentación constante y cronograma claro.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>¡A Sustentar!</h3>
+        <p>Llegás preparado, con Turnitin bajo y dominio total de tu investigación ante el jurado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-wrap">
+    <div class="section-title">
+      <h2>Preguntas <strong>frecuentes</strong></h2>
+    </div>
+    <div class="accordion-item">
+      <details open>
+        <summary>¿Atienden todas las universidades del Perú?</summary>
+        <p>Sí. Contamos con especialistas para UCV, PUCP, UPC, UNMSM, UTP, USMP y más. Cada asesor conoce el reglamento específico de la institución y adapta el trabajo a sus exigencias particulares.</p>
+      </details>
+    </div>
+    <div class="accordion-item">
+      <details>
+        <summary>¿Garantizan un porcentaje bajo en Turnitin?</summary>
+        <p>Garantizamos un índice de similitud menor al 20% con reporte Turnitin oficial. Aplicamos parafraseo experto y citación correcta en formato APA 7ma edición para asegurar la originalidad de tu trabajo.</p>
+      </details>
+    </div>
+    <div class="accordion-item">
+      <details>
+        <summary>¿Cuánto tiempo toma el desarrollo de una tesis completa?</summary>
+        <p>El plan de tesis toma aproximadamente 15 días hábiles. El desarrollo completo entre 45 y 60 días, alineados al cronograma de tu universidad. Si tienes urgencia, también manejamos plazos especiales.</p>
+      </details>
+    </div>
+    <div class="accordion-item">
+      <details>
+        <summary>¿El servicio es confidencial?</summary>
+        <p>Absolutamente. Tu información, datos y proyecto están protegidos bajo estrictos contratos de confidencialidad y ética profesional. Nunca compartimos tu trabajo con terceros.</p>
+      </details>
+    </div>
+    <div class="accordion-item">
+      <details>
+        <summary>¿Me preparan para la sustentación final?</summary>
+        <p>Sí. No solo te entregamos el documento. Te preparamos con simulacros de preguntas del jurado, diseño de diapositivas profesionales y técnicas de oratoria para que llegues con total confianza.</p>
+      </details>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="https://wa.me/51999999999" class="btn-cta">¡Resolver mis dudas por WhatsApp!</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FOOTER -->
+<footer class="cta-footer">
+  <h2>Tu <strong>graduación</strong> empieza hoy</h2>
+  <p>No dejes que la tesis postergue tus sueños. Estamos listos para acompañarte desde el plan hasta el diploma.</p>
+  <a href="https://wa.me/51999999999" class="btn-wa">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    ¡Iniciar mi Asesoría Ahora!
+  </a>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"¿Atienden todas las universidades del Perú?","acceptedAnswer":{"@type":"Answer","text":"Sí. Contamos con especialistas para UCV, PUCP, UPC, UNMSM, UTP, USMP y más."}},
+    {"@type":"Question","name":"¿Garantizan bajo porcentaje en Turnitin?","acceptedAnswer":{"@type":"Answer","text":"Garantizamos menos del 20% de similitud con reporte Turnitin oficial."}}
+  ]
+}
+</script>
+
+</body>
+</html>
