@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import styles from './BotonFlotanteFrap.module.css';
 import { motion, AnimatePresence } from 'framer-motion';

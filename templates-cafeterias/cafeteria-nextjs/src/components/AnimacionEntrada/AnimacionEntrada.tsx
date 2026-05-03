@@ -33,7 +33,7 @@ export const AnimacionEntrada: React.FC<AnimacionEntradaProps> = ({
       transition: {
         duration: duracion,
         delay: retraso,
-        ease: [0.25, 0.46, 0.45, 0.94] // Starbucks cubic-bezier
+        ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number]
       }
     }
   };
