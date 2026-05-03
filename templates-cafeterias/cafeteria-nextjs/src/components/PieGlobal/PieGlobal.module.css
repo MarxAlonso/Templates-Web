@@ -1,0 +1,119 @@
+.pieGlobal {
+  background-color: var(--color-house-green);
+  color: var(--color-white);
+  padding: var(--space-6) 0 var(--space-4) 0;
+  width: 100%;
+}
+
+.contenedor {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--outer-gutter-md);
+}
+
+.columnas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
+}
+
+.tituloColumna {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.listaEnlaces {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.enlace {
+  color: var(--color-text-white-soft);
+  font-size: 1.6rem;
+  transition: color 0.2s ease;
+}
+
+.enlace:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.divisor {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: var(--space-4);
+}
+
+.inferior {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.redes {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.iconoRed {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-circle);
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.iconoRed:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.legales {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  color: var(--color-text-white-soft);
+  font-size: 1.4rem;
+}
+
+.enlacesLegales {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.enlaceLegal {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.enlaceLegal:hover {
+  text-decoration: underline;
+}
+
+.separador {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 768px) {
+  .inferior {
+    flex-direction: column;
+  }
+}

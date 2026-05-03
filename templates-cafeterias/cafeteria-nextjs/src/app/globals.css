@@ -27,6 +27,24 @@
   --color-valid-tint: hsl(160 32% 87% / 33%);
   --color-invalid-tint: hsl(4 82% 43% / 5%);
 
+  /* Typography */
+  --font-inter: var(--font-inter), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-lora: var(--font-lora), "Lander Tall", "Iowan Old Style", Georgia, serif;
+  --color-neutral-warm: #f2f0eb;
+  --color-ceramic: #edebe9;
+  --color-black: #000000;
+  
+  --color-text-black: rgba(0, 0, 0, 0.87);
+  --color-text-black-soft: rgba(0, 0, 0, 0.58);
+  --color-text-white: rgba(255, 255, 255, 1);
+  --color-text-white-soft: rgba(255, 255, 255, 0.70);
+  --color-rewards-green: #33433d;
+  
+  --color-red: #c82014;
+  --color-yellow: #fbbc05;
+  --color-valid-tint: hsl(160 32% 87% / 33%);
+  --color-invalid-tint: hsl(4 82% 43% / 5%);
+
   /* Spacing (1rem = 10px via html font-size 62.5%) */
   --space-1: 0.4rem;
   --space-2: 0.8rem;
@@ -60,11 +78,16 @@
   --shadow-nav: 0 1px 3px rgba(0,0,0,0.1), 0 2px 2px rgba(0,0,0,0.06), 0 0 2px rgba(0,0,0,0.07);
   --shadow-frap-base: 0 0 6px rgba(0,0,0,0.24);
   --shadow-frap-ambient: 0 8px 12px rgba(0,0,0,0.14);
+
+  /* Transitions */
+  --transition-default: all 0.2s ease;
+  --transition-slow: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 html {
   font-size: 62.5%; /* 1rem = 10px */
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *::before, *::after {

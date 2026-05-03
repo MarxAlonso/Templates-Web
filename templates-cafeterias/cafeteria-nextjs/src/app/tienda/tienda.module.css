@@ -1,0 +1,126 @@
+.paginaTienda {
+  background-color: var(--color-neutral-warm);
+  min-height: 100vh;
+}
+
+.hero {
+  background-color: var(--color-house-green);
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/imagenes/hero-nosotros.png');
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+  padding: var(--space-8) var(--outer-gutter-md);
+  text-align: center;
+}
+
+.tituloHero {
+  font-size: 3.6rem;
+  font-weight: 600;
+  margin-bottom: var(--space-5);
+}
+
+.contenedorBusqueda {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  gap: var(--space-3);
+  background-color: var(--color-white);
+  padding: var(--space-2);
+  border-radius: var(--radius-button);
+}
+
+.inputBusqueda {
+  flex-grow: 1;
+  border: none;
+  padding: 0 var(--space-4);
+  font-size: 1.6rem;
+  outline: none;
+  border-radius: var(--radius-button);
+}
+
+.contenido {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  height: calc(100vh - 250px);
+}
+
+.listaTiendas {
+  padding: var(--space-5);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.tarjetaTienda {
+  padding: var(--space-4) !important;
+}
+
+.nombreTienda {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  color: var(--color-starbucks-green);
+}
+
+.infoTienda {
+  font-size: 1.4rem;
+  color: var(--color-text-black-soft);
+  margin-bottom: var(--space-2);
+}
+
+.accionesTienda {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.contenedorMapa {
+  background-color: var(--color-ceramic);
+  position: relative;
+}
+
+.mapaPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(45deg, #e5e5e5 25%, transparent 25%, transparent 75%, #e5e5e5 75%, #e5e5e5), 
+                    linear-gradient(45deg, #e5e5e5 25%, transparent 25%, transparent 75%, #e5e5e5 75%, #e5e5e5);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+.textoMapa {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 1023px) {
+  .contenido {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  
+  .contenedorMapa {
+    height: 400px;
+    order: -1;
+  }
+}
+
+@media (max-width: 767px) {
+  .contenedorBusqueda {
+    flex-direction: column;
+    background: none;
+    padding: 0;
+  }
+  
+  .inputBusqueda {
+    padding: 16px;
+    background-color: var(--color-white);
+  }
+}

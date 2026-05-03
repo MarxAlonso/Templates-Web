@@ -1,0 +1,43 @@
+.acordeon {
+  border-bottom: 1px solid var(--color-ceramic);
+  width: 100%;
+}
+
+.cabecera {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+
+.cabecera:hover .pregunta {
+  color: var(--color-green-accent);
+}
+
+.pregunta {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-text-black);
+}
+
+.icono {
+  font-size: 1.2rem;
+  color: var(--color-text-black-soft);
+}
+
+.contenedorRespuesta {
+  overflow: hidden;
+}
+
+.respuesta {
+  padding-bottom: var(--space-4);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: var(--color-text-black-soft);
+}

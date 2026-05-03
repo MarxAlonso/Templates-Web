@@ -1,0 +1,81 @@
+.paginaMenu {
+  background-color: var(--color-neutral-warm);
+  min-height: 100vh;
+}
+
+.hero {
+  background-color: var(--color-house-green);
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/imagenes/hero-menu.png');
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+  padding: var(--space-9) var(--outer-gutter-md);
+  text-align: center;
+}
+
+.tituloHero {
+  font-size: 4.8rem;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.subtituloHero {
+  font-size: 2rem;
+  color: var(--color-text-white-soft);
+}
+
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-5) var(--outer-gutter-md);
+  background-color: var(--color-white);
+  position: sticky;
+  top: 99px;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.botonFiltro {
+  padding: 8px 24px;
+  border-radius: var(--radius-button);
+  font-size: 1.6rem;
+  font-weight: 600;
+  border: 1px solid var(--color-ceramic);
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.botonFiltro:hover {
+  border-color: var(--color-green-accent);
+}
+
+.filtroActivo {
+  background-color: var(--color-green-accent);
+  color: var(--color-white);
+  border-color: var(--color-green-accent);
+}
+
+.secciones {
+  padding-bottom: var(--space-8);
+}
+
+@media (max-width: 1023px) {
+  .filtros {
+    top: 83px;
+  }
+}
+
+@media (max-width: 767px) {
+  .filtros {
+    top: 72px;
+    padding: var(--space-3);
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+  
+  .botonFiltro {
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,67 @@
+.paginaNosotros {
+  background-color: var(--color-white);
+}
+
+.hero {
+  background-color: var(--color-house-green);
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/imagenes/hero-nosotros.png');
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+  padding: var(--space-9) var(--outer-gutter-md);
+  text-align: center;
+}
+
+.tituloHero {
+  font-size: 4.8rem;
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+}
+
+.subtituloHero {
+  font-size: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--color-text-white-soft);
+  font-family: var(--font-lora);
+}
+
+.valores {
+  padding: var(--space-8) var(--outer-gutter-md);
+  background-color: var(--color-neutral-warm);
+}
+
+.contenedorValores {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tituloSeccion {
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-bottom: var(--space-7);
+}
+
+.gridValores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+.valor {
+  padding: var(--space-5);
+}
+
+.tituloValor {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  color: var(--color-starbucks-green);
+}
+
+.descValor {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: var(--color-text-black-soft);
+}

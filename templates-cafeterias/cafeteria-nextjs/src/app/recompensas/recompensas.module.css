@@ -1,0 +1,110 @@
+.paginaRecompensas {
+  background-color: var(--color-white);
+}
+
+.hero {
+  background-color: var(--color-green-light);
+  background-image: linear-gradient(rgba(212, 233, 226, 0.7), rgba(212, 233, 226, 0.7)), url('/imagenes/hero-verano.png');
+  background-size: cover;
+  background-position: center;
+  padding: var(--space-9) var(--outer-gutter-md);
+  text-align: center;
+}
+
+.tituloHero {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+  letter-spacing: 0.15em;
+  color: var(--color-house-green);
+}
+
+.subtituloHero {
+  font-size: 2.2rem;
+  font-family: var(--font-lora);
+  margin-bottom: var(--space-5);
+  color: var(--color-text-black);
+}
+
+.pasos {
+  padding: var(--space-8) var(--outer-gutter-md);
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tituloSeccion {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: var(--space-7);
+}
+
+.gridPasos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-6);
+}
+
+.paso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circuloPaso {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-circle);
+  border: 2px solid var(--color-green-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-green-accent);
+  margin-bottom: var(--space-4);
+}
+
+.tituloPaso {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+}
+
+.descPaso {
+  font-size: 1.6rem;
+  color: var(--color-text-black-soft);
+  line-height: 1.5;
+}
+
+.niveles {
+  background-color: var(--color-neutral-warm);
+  padding: var(--space-8) var(--outer-gutter-md);
+}
+
+.contenedorNiveles {
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gridNiveles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-5);
+}
+
+.preguntas {
+  padding: var(--space-8) var(--outer-gutter-md);
+}
+
+.contenedorFaq {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .tituloHero {
+    font-size: 2.8rem;
+  }
+}
