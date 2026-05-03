@@ -1,19 +1,8 @@
 import type { Metadata } from "next";
-import { Onest, Lora } from "next/font/google";
 import "./globals.css";
 import { BarraNavegacion } from "@/components/BarraNavegacion/BarraNavegacion";
-import { BotonFlotanteFrap } from "@/components/BotonFlotanteFrap/BotonFlotanteFrap";
 import { PieGlobal } from "@/components/PieGlobal/PieGlobal";
-
-const onest = Onest({
-  variable: "--font-onest",
-  subsets: ["latin"],
-});
-
-const lora = Lora({
-  variable: "--font-lora",
-  subsets: ["latin"],
-});
+import { BotonFlotanteFrap } from "@/components/BotonFlotanteFrap/BotonFlotanteFrap";
 
 export const metadata: Metadata = {
   title: "Cafetería Starbucks Style",
@@ -27,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${onest.variable} ${lora.variable}`}>
+      <body>
         <BarraNavegacion />
         <main>{children}</main>
         <PieGlobal />

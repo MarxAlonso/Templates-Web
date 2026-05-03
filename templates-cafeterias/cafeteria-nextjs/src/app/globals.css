@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
 :root {
   /* Colors */
   --color-starbucks-green: #006241;
@@ -28,22 +30,8 @@
   --color-invalid-tint: hsl(4 82% 43% / 5%);
 
   /* Typography */
-  --font-sans: var(--font-onest), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: 'Onest', sans-serif;
   --font-lora: var(--font-lora), "Lander Tall", "Iowan Old Style", Georgia, serif;
-  --color-neutral-warm: #f2f0eb;
-  --color-ceramic: #edebe9;
-  --color-black: #000000;
-  
-  --color-text-black: rgba(0, 0, 0, 0.87);
-  --color-text-black-soft: rgba(0, 0, 0, 0.58);
-  --color-text-white: rgba(255, 255, 255, 1);
-  --color-text-white-soft: rgba(255, 255, 255, 0.70);
-  --color-rewards-green: #33433d;
-  
-  --color-red: #c82014;
-  --color-yellow: #fbbc05;
-  --color-valid-tint: hsl(160 32% 87% / 33%);
-  --color-invalid-tint: hsl(4 82% 43% / 5%);
 
   /* Spacing (1rem = 10px via html font-size 62.5%) */
   --space-1: 0.4rem;
@@ -97,7 +85,7 @@ html {
 }
 
 body {
-  font-family: var(--font-inter), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--font-sans);
   background-color: var(--color-neutral-warm);
   color: var(--color-text-black);
   font-size: 1.6rem; /* 16px */
@@ -140,3 +128,4 @@ h2 {
   line-height: var(--line-height-compact);
   letter-spacing: -0.16px;
 }
+
