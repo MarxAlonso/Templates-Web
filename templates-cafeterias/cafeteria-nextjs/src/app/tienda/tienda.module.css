@@ -20,22 +20,39 @@
 }
 
 .contenedorBusqueda {
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
   display: flex;
   gap: var(--space-3);
   background-color: var(--color-white);
   padding: var(--space-2);
   border-radius: var(--radius-button);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.inputWrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding-left: var(--space-3);
+  border: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.inputWrapper:focus-within {
+  border-bottom: 1px solid var(--color-starbucks-green);
+}
+
+.iconoBusqueda {
+  color: var(--color-text-black-soft);
 }
 
 .inputBusqueda {
-  flex-grow: 1;
+  width: 100%;
   border: none;
-  padding: 0 var(--space-4);
+  padding: var(--space-3);
   font-size: 1.6rem;
   outline: none;
-  border-radius: var(--radius-button);
 }
 
 .contenido {
@@ -63,10 +80,23 @@
   color: var(--color-starbucks-green);
 }
 
-.infoTienda {
-  font-size: 1.4rem;
-  color: var(--color-text-black-soft);
+.infoLinea {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
   margin-bottom: var(--space-2);
+}
+
+.iconoInfo {
+  color: var(--color-green-accent);
+  margin-top: 2px;
+}
+
+.infoTienda {
+  font-size: 1.5rem;
+  color: var(--color-text-black-soft);
+  line-height: 1.4;
+  margin: 0;
 }
 
 .accionesTienda {

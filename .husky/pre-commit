@@ -1,0 +1,1 @@
+cd "templates-cafeterias/cafeteria-nextjs" && pnpm validar-push

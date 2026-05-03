@@ -6,6 +6,7 @@ import { AnimacionEntrada } from '@/components/AnimacionEntrada/AnimacionEntrada
 import { TarjetaRecompensa } from '@/components/TarjetaRecompensa/TarjetaRecompensa';
 import { Acordeon } from '@/components/Acordeon/Acordeon';
 import { Boton } from '@/components/Boton/Boton';
+import { Star, Smartphone, CreditCard, Gift, ArrowRight } from 'lucide-react';
 
 export default function RecompensasPage() {
   return (
@@ -22,14 +23,16 @@ export default function RecompensasPage() {
         <h2 className={styles.tituloSeccion}>Cómo funciona</h2>
         <div className={styles.gridPasos}>
           {[
-            { num: 1, tit: 'Crea una cuenta', des: 'Regístrate en la app para empezar a acumular estrellas.' },
-            { num: 2, tit: 'Pide y paga', des: 'Usa efectivo, tarjeta o carga tu Starbucks Card.' },
-            { num: 3, tit: 'Gana estrellas', des: 'Canjea tus estrellas por bebidas, comida y más.' },
-          ].map((paso, index) => (
-            <AnimacionEntrada key={paso.num} retraso={index * 0.2} className={styles.paso}>
-              <div className={styles.circuloPaso}>{paso.num}</div>
-              <h3 className={styles.tituloPaso}>{paso.tit}</h3>
-              <p className={styles.descPaso}>{paso.des}</p>
+            { Icono: Smartphone, tit: 'Crea una cuenta', des: 'Regístrate en la aplicación oficial para empezar a acumular estrellas de inmediato.' },
+            { Icono: CreditCard, tit: 'Pide y paga como quieras', des: 'Usa efectivo, tarjeta de crédito/débito o carga saldo en tu Starbucks Card.' },
+            { Icono: Gift, tit: 'Gana estrellas, obtén regalos', des: 'Canjea tus estrellas acumuladas por bebidas, comida y muchas sorpresas más.' },
+          ].map(({ Icono, tit, des }, index) => (
+            <AnimacionEntrada key={tit} retraso={index * 0.2} className={styles.paso}>
+              <div className={styles.circuloIcono}>
+                <Icono size={28} />
+              </div>
+              <h3 className={styles.tituloPaso}>{tit}</h3>
+              <p className={styles.descPaso}>{des}</p>
             </AnimacionEntrada>
           ))}
         </div>

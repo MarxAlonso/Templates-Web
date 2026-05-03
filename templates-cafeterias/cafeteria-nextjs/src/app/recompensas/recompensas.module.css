@@ -51,18 +51,23 @@
   align-items: center;
 }
 
-.circuloPaso {
-  width: 48px;
-  height: 48px;
+.circuloIcono {
+  width: 64px;
+  height: 64px;
   border-radius: var(--radius-circle);
-  border: 2px solid var(--color-green-accent);
+  background-color: var(--color-green-light);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: var(--color-green-accent);
+  color: var(--color-house-green);
   margin-bottom: var(--space-4);
+  transition: transform 0.3s ease;
+}
+
+.paso:hover .circuloIcono {
+  transform: scale(1.1);
+  background-color: var(--color-green-accent);
+  color: var(--color-white);
 }
 
 .tituloPaso {

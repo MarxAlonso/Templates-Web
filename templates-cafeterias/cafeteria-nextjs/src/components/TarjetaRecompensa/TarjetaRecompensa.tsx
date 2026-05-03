@@ -3,6 +3,7 @@
 import React from 'react';
 import styles from './TarjetaRecompensa.module.css';
 import { Tarjeta } from '../Tarjeta/Tarjeta';
+import { Star } from 'lucide-react';
 
 interface TarjetaRecompensaProps {
   nivel: string;
@@ -26,7 +27,10 @@ export const TarjetaRecompensa: React.FC<TarjetaRecompensaProps> = ({
         <div className={styles.badgeNivel}>
           <span className={styles.nivelTexto}>{nivel}</span>
         </div>
-        <h3 className={styles.estrellas}>{estrellas} ★</h3>
+        <div className={styles.estrellasContenedor}>
+          <span className={styles.estrellas}>{estrellas}</span>
+          <Star className={styles.iconoEstrella} fill="currentColor" />
+        </div>
         <h4 className={styles.titulo}>{titulo}</h4>
         <p className={styles.descripcion}>{descripcion}</p>
       </div>

@@ -5,6 +5,7 @@ import styles from './tienda.module.css';
 import { AnimacionEntrada } from '@/components/AnimacionEntrada/AnimacionEntrada';
 import { Tarjeta } from '@/components/Tarjeta/Tarjeta';
 import { Boton } from '@/components/Boton/Boton';
+import { MapPin, Phone, Clock, Search, Navigation } from 'lucide-react';
 
 export default function TiendaPage() {
   const tiendas = [
@@ -19,8 +20,11 @@ export default function TiendaPage() {
         <AnimacionEntrada>
           <h1 className={styles.tituloHero}>Encuentra tu tienda</h1>
           <div className={styles.contenedorBusqueda}>
-            <input type="text" placeholder="Ingresa tu ubicación o código postal" className={styles.inputBusqueda} />
-            <Boton variante="primarioRelleno">Buscar</Boton>
+            <div className={styles.inputWrapper}>
+              <Search className={styles.iconoBusqueda} size={20} />
+              <input type="text" placeholder="Ingresa tu ciudad, dirección o código postal" className={styles.inputBusqueda} />
+            </div>
+            <Boton variante="primarioRelleno">Buscar tiendas</Boton>
           </div>
         </AnimacionEntrada>
       </header>
@@ -31,12 +35,24 @@ export default function TiendaPage() {
             <AnimacionEntrada key={tienda.id} retraso={index * 0.1}>
               <Tarjeta className={styles.tarjetaTienda}>
                 <h3 className={styles.nombreTienda}>{tienda.nombre}</h3>
-                <p className={styles.infoTienda}>📍 {tienda.dir}</p>
-                <p className={styles.infoTienda}>📞 {tienda.tel}</p>
-                <p className={styles.infoTienda}>🕒 {tienda.horario}</p>
+                <div className={styles.infoLinea}>
+                  <MapPin size={16} className={styles.iconoInfo} />
+                  <p className={styles.infoTienda}>{tienda.dir}</p>
+                </div>
+                <div className={styles.infoLinea}>
+                  <Phone size={16} className={styles.iconoInfo} />
+                  <p className={styles.infoTienda}>{tienda.tel}</p>
+                </div>
+                <div className={styles.infoLinea}>
+                  <Clock size={16} className={styles.iconoInfo} />
+                  <p className={styles.infoTienda}>{tienda.horario}</p>
+                </div>
                 <div className={styles.accionesTienda}>
-                  <Boton variante="primarioContorno">Cómo llegar</Boton>
-                  <Boton variante="oscuroContorno">Ver más</Boton>
+                  <Boton variante="primarioContorno">
+                    <Navigation size={14} style={{ marginRight: '6px' }} />
+                    Cómo llegar
+                  </Boton>
+                  <Boton variante="oscuroContorno">Detalles</Boton>
                 </div>
               </Tarjeta>
             </AnimacionEntrada>

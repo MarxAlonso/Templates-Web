@@ -7,6 +7,7 @@ import { BandaCaracteristica } from "@/components/BandaCaracteristica/BandaCarac
 import { AnimacionEntrada } from "@/components/AnimacionEntrada/AnimacionEntrada";
 import styles from "./page.module.css";
 import Link from 'next/link';
+import { ShoppingBag, Star, Info, ChevronRight, MapPin } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -26,10 +27,13 @@ export default function Home() {
             <Tarjeta padding="ninguno" className={styles.tarjeta}>
               <img src="/imagenes/cafe-premium.png" alt="Café" className={styles.imagenTarjeta} />
               <div className={styles.contenidoTarjeta}>
-                <h3 className={styles.tituloTarjeta}>Café Premium</h3>
-                <p className={styles.textoTarjeta}>Descubre nuestra selección de granos tostados especialmente para ti.</p>
+                <h3 className={styles.tituloTarjeta}>Café de Especialidad</h3>
+                <p className={styles.textoTarjeta}>Disfruta de una selección exclusiva de granos de origen único, tostados artesanalmente para resaltar cada nota de sabor.</p>
                 <Link href="/menu">
-                  <Boton variante="primarioContorno">Conocer más</Boton>
+                  <Boton variante="primarioContorno">
+                    Explorar selección
+                    <ChevronRight size={16} style={{ marginLeft: '4px' }} />
+                  </Boton>
                 </Link>
               </div>
             </Tarjeta>
@@ -39,10 +43,13 @@ export default function Home() {
             <Tarjeta padding="ninguno" className={styles.tarjeta}>
               <img src="/imagenes/dulces-momentos.png" alt="Postre" className={styles.imagenTarjeta} />
               <div className={styles.contenidoTarjeta}>
-                <h3 className={styles.tituloTarjeta}>Dulces Momentos</h3>
-                <p className={styles.textoTarjeta}>El complemento perfecto para tu bebida favorita.</p>
+                <h3 className={styles.tituloTarjeta}>Momentos para Endulzar</h3>
+                <p className={styles.textoTarjeta}>Acompaña tu bebida con nuestra repostería recién horneada: desde croissants de mantequilla hasta muffins artesanales.</p>
                 <Link href="/menu">
-                  <Boton variante="primarioContorno">Ver repostería</Boton>
+                  <Boton variante="primarioContorno">
+                    Ver repostería
+                    <ChevronRight size={16} style={{ marginLeft: '4px' }} />
+                  </Boton>
                 </Link>
               </div>
             </Tarjeta>
@@ -62,10 +69,16 @@ export default function Home() {
       <section className={styles.seccionRecompensas}>
         <div className={styles.contenedorRecompensas}>
           <AnimacionEntrada>
-            <h2 className={styles.tituloSeccion}>Gana estrellas gratis</h2>
-            <p className={styles.textoSeccion}>Únete a Starbucks Rewards para obtener bebidas gratis y beneficios exclusivos.</p>
+            <div className={styles.badgeEstrellas}>
+              <Star size={24} fill="currentColor" />
+            </div>
+            <h2 className={styles.tituloSeccion}>Gana estrellas con cada sorbo</h2>
+            <p className={styles.textoSeccion}>Únete a Starbucks Rewards™ y descubre un mundo de beneficios: bebidas de cortesía, ofertas personalizadas y acceso anticipado a nuevos productos.</p>
             <Link href="/recompensas">
-              <Boton variante="negro">Saber más</Boton>
+              <Boton variante="negro">
+                <Star size={16} style={{ marginRight: '8px' }} />
+                Conoce los beneficios
+              </Boton>
             </Link>
           </AnimacionEntrada>
         </div>

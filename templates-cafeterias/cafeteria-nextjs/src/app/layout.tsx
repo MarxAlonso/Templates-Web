@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Lora } from "next/font/google";
+import { Onest, Lora } from "next/font/google";
 import "./globals.css";
 import { BarraNavegacion } from "@/components/BarraNavegacion/BarraNavegacion";
 import { BotonFlotanteFrap } from "@/components/BotonFlotanteFrap/BotonFlotanteFrap";
 import { PieGlobal } from "@/components/PieGlobal/PieGlobal";
 
-const inter = Inter({
-  variable: "--font-inter",
+const onest = Onest({
+  variable: "--font-onest",
   subsets: ["latin"],
 });
 
@@ -26,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${inter.variable} ${lora.variable}`}>
-      <body>
+    <html lang="es">
+      <body className={`${onest.variable} ${lora.variable}`}>
         <BarraNavegacion />
         <main>{children}</main>
         <PieGlobal />

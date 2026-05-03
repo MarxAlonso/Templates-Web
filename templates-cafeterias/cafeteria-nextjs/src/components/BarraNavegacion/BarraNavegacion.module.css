@@ -30,11 +30,24 @@
 }
 
 .logo {
-  font-weight: 600;
-  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 2.2rem;
   color: var(--color-starbucks-green);
-  margin-right: var(--space-4);
   letter-spacing: var(--letter-spacing-loose);
+}
+
+.iconoLogo {
+  color: var(--color-starbucks-green);
+  width: 28px;
+  height: 28px;
+}
+
+.logoTexto {
+  font-family: var(--font-sans);
 }
 
 .enlacesEscritorio {

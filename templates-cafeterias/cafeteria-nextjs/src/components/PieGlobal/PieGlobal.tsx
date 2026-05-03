@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from './PieGlobal.module.css';
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 
 export const PieGlobal: React.FC = () => {
   return (
@@ -37,17 +38,24 @@ export const PieGlobal: React.FC = () => {
         
         <div className={styles.inferior}>
           <div className={styles.redes}>
-            <a href="#" aria-label="Facebook" className={styles.iconoRed}>📱</a>
-            <a href="#" aria-label="Instagram" className={styles.iconoRed}>📸</a>
-            <a href="#" aria-label="Twitter" className={styles.iconoRed}>🐦</a>
+            <a href="#" className={styles.iconoRed} aria-label="Facebook"><FaFacebook size={24} /></a>
+            <a href="#" className={styles.iconoRed} aria-label="Instagram"><FaInstagram size={24} /></a>
+            <a href="#" className={styles.iconoRed} aria-label="Twitter"><FaTwitter size={24} /></a>
+            <a href="#" className={styles.iconoRed} aria-label="Youtube"><FaYoutube size={24} /></a>
           </div>
           <div className={styles.legales}>
-            <p>&copy; {new Date().getFullYear()} Starbucks Style Template. Todos los derechos reservados.</p>
             <div className={styles.enlacesLegales}>
-              <Link href="#" className={styles.enlaceLegal}>Política de Privacidad</Link>
+              <Link href="#" className={styles.enlaceLegal}>Privacidad</Link>
               <span className={styles.separador}>|</span>
-              <Link href="#" className={styles.enlaceLegal}>Términos de Uso</Link>
+              <Link href="#" className={styles.enlaceLegal}>Términos de uso</Link>
+              <span className={styles.separador}>|</span>
+              <Link href="#" className={styles.enlaceLegal}>Cookies</Link>
             </div>
+            <p className={styles.copyright}>
+              © {new Date().getFullYear()} Starbucks Coffee Company. Todos los derechos reservados. 
+              <br />
+              Este es un template de demostración para fines de diseño.
+            </p>
           </div>
         </div>
       </div>

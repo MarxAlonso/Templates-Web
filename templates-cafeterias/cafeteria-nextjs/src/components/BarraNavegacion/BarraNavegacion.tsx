@@ -7,6 +7,7 @@ import styles from './BarraNavegacion.module.css';
 import { useAlternarMenu } from '@/hooks/useAlternarMenu';
 import { Boton } from '../Boton/Boton';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Coffee, MapPin, User, LogIn, Menu, X } from 'lucide-react';
 
 export const BarraNavegacion: React.FC = () => {
   const { estaAbierto, alternar, cerrar } = useAlternarMenu();
@@ -36,7 +37,8 @@ export const BarraNavegacion: React.FC = () => {
       <div className={styles.contenedor}>
         <div className={styles.izquierda}>
           <Link href="/" className={styles.logo}>
-            ☕ STARBUCKS
+            <Coffee className={styles.iconoLogo} />
+            <span className={styles.logoTexto}>STARBUCKS</span>
           </Link>
           <div className={styles.enlacesEscritorio}>
             {enlaces.map((enlace) => (
@@ -53,22 +55,17 @@ export const BarraNavegacion: React.FC = () => {
         <div className={styles.derecha}>
           <div className={styles.accionesEscritorio}>
             <Link href="/tienda" className={styles.enlaceTienda}>
-              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-              </svg>
-              Encontrar tienda
+              <MapPin size={18} />
+              <span>Localizar Tienda</span>
             </Link>
-            <Boton variante="oscuroContorno">Iniciar sesión</Boton>
+            <Boton variante="oscuroContorno">
+              <User size={16} style={{ marginRight: '8px' }} />
+              Iniciar sesión
+            </Boton>
             <Boton variante="negro">Únete ahora</Boton>
           </div>
-          <button className={styles.hamburguesa} onClick={alternar} aria-label="Menú">
-            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none">
-              {estaAbierto ? (
-                <path d="M18 6L6 18M6 6l12 12" />
-              ) : (
-                <path d="M3 12h18M3 6h18M3 18h18" />
-              )}
-            </svg>
+          <button className={styles.hamburguesa} onClick={alternar} aria-label="Abrir Menú de Navegación">
+            {estaAbierto ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
@@ -94,14 +91,15 @@ export const BarraNavegacion: React.FC = () => {
               ))}
               <div className={styles.divisorMovil}></div>
               <Link href="/tienda" className={styles.enlaceMovilTienda}>
-                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                </svg>
-                Encontrar tienda
+                <MapPin size={20} />
+                <span>Encontrar una tienda cercana</span>
               </Link>
               <div className={styles.accionesMovil}>
-                <Boton variante="oscuroContorno">Iniciar sesión</Boton>
-                <Boton variante="negro">Únete ahora</Boton>
+                <Boton variante="oscuroContorno">
+                  <User size={18} style={{ marginRight: '10px' }} />
+                  Acceder a mi cuenta
+                </Boton>
+                <Boton variante="negro">Crear cuenta Rewards</Boton>
               </div>
             </div>
           </motion.div>

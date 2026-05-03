@@ -59,6 +59,13 @@
   margin: 0 auto;
 }
 
+.badgeEstrellas {
+  color: var(--color-gold);
+  margin-bottom: var(--space-4);
+  display: flex;
+  justify-content: center;
+}
+
 .tituloSeccion {
   font-size: 3.2rem;
   font-weight: 600;

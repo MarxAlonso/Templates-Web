@@ -28,7 +28,7 @@
   --color-invalid-tint: hsl(4 82% 43% / 5%);
 
   /* Typography */
-  --font-inter: var(--font-inter), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: var(--font-onest), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-lora: var(--font-lora), "Lander Tall", "Iowan Old Style", Georgia, serif;
   --color-neutral-warm: #f2f0eb;
   --color-ceramic: #edebe9;

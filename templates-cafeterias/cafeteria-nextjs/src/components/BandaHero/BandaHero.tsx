@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './BandaHero.module.css';
 import { Boton } from '../Boton/Boton';
 import { AnimacionEntrada } from '../AnimacionEntrada/AnimacionEntrada';
+import { ArrowRight, Star } from 'lucide-react';
 
 interface BandaHeroProps {
   titulo: string;
@@ -28,10 +29,16 @@ export const BandaHero: React.FC<BandaHeroProps> = ({
           <p className={styles.subtitulo}>{subtitulo}</p>
           <div className={styles.acciones}>
             {textoBotonPrimario && (
-              <Boton variante="verdeInvertido">{textoBotonPrimario}</Boton>
+              <Boton variante="verdeInvertido">
+                {textoBotonPrimario}
+                <ArrowRight size={18} style={{ marginLeft: '8px' }} />
+              </Boton>
             )}
             {textoBotonSecundario && (
-              <Boton variante="blancoContornoOscuro">{textoBotonSecundario}</Boton>
+              <Boton variante="blancoContornoOscuro">
+                <Star size={18} style={{ marginRight: '8px' }} />
+                {textoBotonSecundario}
+              </Boton>
             )}
           </div>
         </AnimacionEntrada>
