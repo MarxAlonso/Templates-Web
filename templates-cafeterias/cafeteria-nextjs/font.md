@@ -1,0 +1,10 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+</style>
+
+.onest-<uniquifier> {
+  font-family: "Onest", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
