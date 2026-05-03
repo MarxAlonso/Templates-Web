@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect, useRef } from 'react';
 
 export const useDesplazamientoVisible = (opciones = { threshold: 0.1, rootMargin: '0px' }) => {

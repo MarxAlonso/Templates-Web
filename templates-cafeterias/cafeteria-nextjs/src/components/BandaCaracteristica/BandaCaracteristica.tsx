@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import styles from './BandaCaracteristica.module.css';
 import { Boton } from '../Boton/Boton';
 import { AnimacionEntrada } from '../AnimacionEntrada/AnimacionEntrada';
@@ -43,7 +44,13 @@ export const BandaCaracteristica: React.FC<BandaCaracteristicaProps> = ({
         </AnimacionEntrada>
       </div>
       <div className={styles.columnaImagen}>
-        <img src={imagenUrl} alt={imagenAlt} className={styles.imagen} />
+        <Image 
+          src={imagenUrl} 
+          alt={imagenAlt} 
+          className={styles.imagen} 
+          width={800} 
+          height={600}
+        />
       </div>
     </section>
   );

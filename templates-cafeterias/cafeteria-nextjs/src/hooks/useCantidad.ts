@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 
 export const useCantidad = (inicial: number = 1, min: number = 1, max: number = 99) => {

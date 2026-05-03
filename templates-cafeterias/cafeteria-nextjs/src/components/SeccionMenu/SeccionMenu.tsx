@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import styles from './SeccionMenu.module.css';
 import { Tarjeta } from '../Tarjeta/Tarjeta';
 import { Boton } from '../Boton/Boton';
@@ -30,7 +31,14 @@ export const SeccionMenu: React.FC<SeccionMenuProps> = ({ titulo, items }) => {
           <AnimacionEntrada key={item.id} retraso={index * 0.1}>
             <Tarjeta padding="ninguno" className={styles.tarjetaItem}>
               <div className={styles.contenedorImagen}>
-                <img src={item.imagenUrl} alt={item.nombre} className={styles.imagen} />
+                <Image 
+                  src={item.imagenUrl} 
+                  alt={item.nombre} 
+                  className={styles.imagen} 
+                  width={400} 
+                  height={300}
+                  style={{ objectFit: 'cover' }}
+                />
               </div>
               <div className={styles.contenido}>
                 <h3 className={styles.nombreItem}>{item.nombre}</h3>

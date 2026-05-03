@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
-
 :root {
   /* Colors */
   --color-starbucks-green: #006241;
@@ -30,7 +28,7 @@
   --color-invalid-tint: hsl(4 82% 43% / 5%);
 
   /* Typography */
-  --font-sans: 'Onest', sans-serif;
+  --font-sans: var(--font-onest), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
   /* Spacing (1rem = 10px via html font-size 62.5%) */
   --space-1: 0.4rem;

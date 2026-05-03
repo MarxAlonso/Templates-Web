@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './BandaHero.module.css';
 import { Boton } from '../Boton/Boton';
 import { AnimacionEntrada } from '../AnimacionEntrada/AnimacionEntrada';
@@ -45,7 +46,14 @@ export const BandaHero: React.FC<BandaHeroProps> = ({
       </div>
       <div className={styles.columnaImagen}>
         <AnimacionEntrada direccion="derecha" retraso={0.4} className={styles.wrapperImagen}>
-          <img src={imagenUrl} alt={imagenAlt} className={styles.imagen} />
+          <Image 
+            src={imagenUrl} 
+            alt={imagenAlt} 
+            className={styles.imagen} 
+            width={800} 
+            height={600}
+            priority={true}
+          />
         </AnimacionEntrada>
       </div>
     </section>

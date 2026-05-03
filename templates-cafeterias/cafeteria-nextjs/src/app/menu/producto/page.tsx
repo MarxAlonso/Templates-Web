@@ -1,10 +1,12 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { useSeleccionTamano, TamanoBebida } from '@/hooks/useSeleccionTamano';
 import { useCantidad } from '@/hooks/useCantidad';
 import { Boton } from '@/components/Boton/Boton';
 import styles from './producto.module.css';
+import { CupSoda, Plus, Minus, Sparkles } from 'lucide-react';
 
 export default function ProductoDetalle() {
   const { tamanoSeleccionado, seleccionarTamano } = useSeleccionTamano('Grande');
@@ -27,7 +29,14 @@ export default function ProductoDetalle() {
 
       {/* Hero Image */}
       <div className={styles.contenedorImagen}>
-        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?q=80&w=600&auto=format&fit=crop" alt="Pink Energy Drink" className={styles.imagenProducto} />
+        <Image 
+          src="/imagenes/bebida-rosa.png" 
+          alt="Pink Energy Drink" 
+          className={styles.imagenProducto} 
+          width={600} 
+          height={600}
+          priority={true}
+        />
       </div>
 
       <div className={styles.contenedorPrincipal}>
@@ -41,7 +50,9 @@ export default function ProductoDetalle() {
                 className={`${styles.botonTamano} ${tamanoSeleccionado === t.id ? styles.tamanoActivo : ''}`}
                 onClick={() => seleccionarTamano(t.id)}
               >
-                <div className={styles.iconoVaso}>🥤</div>
+                <div className={styles.iconoVaso}>
+                  <CupSoda size={24} />
+                </div>
                 <div className={styles.nombreTamano}>{t.id}</div>
                 <div className={styles.onzasTamano}>{t.onzas} fl oz</div>
               </button>
@@ -56,15 +67,18 @@ export default function ProductoDetalle() {
             <div className={styles.controlCantidad}>
               <span className={styles.valorPersonalizacion}>Frutas rojas (Scoop)</span>
               <div className={styles.stepper}>
-                <button className={styles.botonStepper} onClick={scoopsCantidad.decrementar}>-</button>
+                <button className={styles.botonStepper} onClick={scoopsCantidad.decrementar}><Minus size={16} /></button>
                 <span className={styles.valorStepper}>{scoopsCantidad.cantidad}</span>
-                <button className={styles.botonStepper} onClick={scoopsCantidad.incrementar}>+</button>
+                <button className={styles.botonStepper} onClick={scoopsCantidad.incrementar}><Plus size={16} /></button>
               </div>
             </div>
           </div>
           
           <div className={styles.accionesPedido}>
-            <Boton variante="primarioContorno">✨ Personalizar</Boton>
+            <Boton variante="primarioContorno">
+              <Sparkles size={18} style={{ marginRight: '8px' }} />
+              Personalizar
+            </Boton>
             <Boton variante="primarioRelleno">Añadir al pedido</Boton>
           </div>
         </section>
