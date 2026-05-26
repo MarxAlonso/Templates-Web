@@ -31,7 +31,7 @@ export default function Home() {
           <div className={styles.heroVisual}>
             <div className={styles.heroImgWrapper}>
               <Image
-                src="/imagenes/ucv/ucv-hero.jfif"
+                src="/imagenes/ucv/h1-tesis-cesar-vallejo-tesis-guia-estrategica-para-graduarte-sin-complicaciones.jfif"
                 alt="Asesoría de tesis profesional"
                 width={600}
                 height={400}
