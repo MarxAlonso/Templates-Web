@@ -17,30 +17,6 @@ import {
 } from "lucide-react";
 import { ORGANOS, rutasOrgano, Organo } from "./data";
 
-// Custom Elements declaration for TypeScript in React
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'model-viewer': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
-        src?: string;
-        alt?: string;
-        'camera-controls'?: boolean;
-        'touch-action'?: string;
-        'shadow-intensity'?: string;
-        exposure?: string;
-        'environment-image'?: string;
-        'auto-rotate-delay'?: string;
-        'interaction-prompt'?: string;
-        ar?: boolean;
-        'ar-modes'?: string;
-        'camera-orbit'?: string;
-        'field-of-view'?: string;
-        'auto-rotate'?: boolean;
-      };
-    }
-  }
-}
-
 export default function Home() {
   const [selectedId, setSelectedId] = useState<string>("higado");
   const [compareA, setCompareA] = useState<string>("higado");
