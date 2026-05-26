@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Moon, Sun } from "lucide-react";
+import { Minimize2, RotateCcw, ZoomIn, ZoomOut, Maximize, ChevronDown, X, Layers3, Activity, MapPin, Link2, Moon, Sun, User } from "lucide-react";
 import { useStudio } from "../context/StudioContext";
 
 export default function Topbar() {
@@ -44,6 +44,10 @@ export default function Topbar() {
         >
           Ajustes
         </button>
+        <Link href="/creator" className="topbar__creator-link">
+          <User size={14} />
+          <span>Creador</span>
+        </Link>
         
         <button className="theme-toggle" onClick={toggleTheme} aria-label="Alternar tema oscuro">
           {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}

@@ -129,6 +129,7 @@ img {
 .topbar__nav {
   margin-left: auto;
   display: flex;
+  align-items: center;
   gap: 8px;
 }
 
@@ -142,6 +143,47 @@ img {
   transition:
     color 0.15s ease,
     background 0.15s ease;
+}
+
+.topbar__creator-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-dark);
+  background: var(--primary-soft);
+  text-decoration: none;
+  border: 1px solid rgba(24, 121, 201, 0.2);
+  transition: all 0.18s ease;
+}
+
+.topbar__creator-link:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  background: var(--card-soft);
+  transition: all 0.18s ease;
+  padding: 0;
+}
+
+.theme-toggle:hover {
+  color: var(--primary-dark);
+  border-color: var(--primary);
+  background: var(--primary-soft);
 }
 
 .topbar__nav button:hover,
