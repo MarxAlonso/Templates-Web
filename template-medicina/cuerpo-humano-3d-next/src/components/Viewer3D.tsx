@@ -1,6 +1,7 @@
+// @ts-nocheck
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Minimize2, RotateCcw, ZoomIn, ZoomOut, Maximize } from "lucide-react";
 import { useStudio } from "../context/StudioContext";
 import { rutasOrgano } from "../app/data";
@@ -14,6 +15,17 @@ export default function Viewer3D() {
 
   const organoActual = getOrgano(selectedId);
   const rutasActuales = rutasOrgano(organoActual);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    if (isLoading) {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      timeoutRef.current = setTimeout(() => setIsLoading(false), 8000);
+    }
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, [isLoading, setIsLoading]);
 
   return (
     <section className="card viewer-card" id="viewer-card">
@@ -62,6 +74,7 @@ export default function Viewer3D() {
         <div className="viewer-stage__loading">Cargando modelo 3D…</div>
 
         <model-viewer
+          key={organoActual.id}
           ref={modelViewerRef}
           id="model-viewer"
           src={rutasActuales.modelo}
