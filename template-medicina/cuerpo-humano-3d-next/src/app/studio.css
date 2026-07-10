@@ -132,7 +132,7 @@ a {
   border: 2px solid rgba(35, 104, 217, 0.85);
   border-radius: 50%;
   background:
-    #fff url("/Cuerpo_humano.png") center 17% / 190% auto no-repeat;
+    #fff url("/Cuerpo_humano.webp") center 17% / 190% auto no-repeat;
 }
 
 .studio-workspace {
