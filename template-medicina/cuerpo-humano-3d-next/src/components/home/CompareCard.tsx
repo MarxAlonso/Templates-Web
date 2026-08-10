@@ -2,8 +2,8 @@
 
 import React from "react";
 import { ChevronDown } from "lucide-react";
-import { useStudio } from "../context/StudioContext";
-import { ORGANOS, rutasOrgano } from "../app/data";
+import { useStudio } from "../../context/StudioContext";
+import { ORGANOS, rutasOrgano } from "../../app/data";
 
 export default function CompareCard() {
   const { collapsedStates, toggleCollapsed, setModals, compareA, setCompareA, compareB, setCompareB, getOrgano } = useStudio();

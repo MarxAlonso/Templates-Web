@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { useStudio } from "../context/StudioContext";
-import { ORGANOS, rutasOrgano } from "../app/data";
+import { useStudio } from "../../context/StudioContext";
+import { ORGANOS, rutasOrgano } from "../../app/data";
 
 export default function Sidebar() {
   const { selectedId, seleccionarOrgano } = useStudio();

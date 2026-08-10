@@ -2,8 +2,8 @@
 
 import React from "react";
 import { ChevronDown, Layers3, Activity, MapPin, Link2 } from "lucide-react";
-import { useStudio } from "../context/StudioContext";
-import { rutasOrgano } from "../app/data";
+import { useStudio } from "../../context/StudioContext";
+import { rutasOrgano } from "../../app/data";
 
 export default function RightPanel() {
   const { selectedId, getOrgano, collapsedStates, toggleCollapsed } = useStudio();

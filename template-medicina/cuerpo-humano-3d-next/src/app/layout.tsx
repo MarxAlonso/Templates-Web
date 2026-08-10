@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -21,8 +22,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${inter.variable} scroll-smooth`}>
-      <body className="antialiased">
+    <html lang="es" className={`${inter.variable} scroll-smooth`} suppressHydrationWarning>
+      <body className="antialiased" suppressHydrationWarning>
+        <Script id="theme-init" strategy="beforeInteractive">
+          {`(function() {
+            try {
+              var theme = localStorage.getItem('theme');
+              if (theme === 'light') {
+                document.documentElement.classList.remove('dark');
+              } else {
+                document.documentElement.classList.add('dark');
+              }
+            } catch (e) {}
+          })();`}
+        </Script>
         {children}
       </body>
     </html>

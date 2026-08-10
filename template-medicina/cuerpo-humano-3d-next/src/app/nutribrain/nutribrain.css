@@ -1,0 +1,151 @@
+@import "tailwindcss/theme.css";
+@import "tailwindcss/utilities.css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ==========================================================================
+   NutriBrain scope - variables y estilos aislados del CSS del studio
+   El scope usa position:fixed para crear su propio contenedor de scroll,
+   ya que el body global del main app está bloqueado (overflow hidden).
+   ========================================================================== */
+
+:where(.nutribrain-scope) {
+  position: fixed;
+  inset: 0;
+  overflow-y: auto;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Light mode */
+  --background: #f8fafc; /* Slate 50 */
+  --foreground: #0f172a; /* Slate 900 */
+  --card: #ffffff;
+  --card-alt: #f1f5f9;
+  --border: #cbd5e1;
+  --accent: #e2e8f0;
+  --text-muted: #64748b;
+  --text-secondary: #334155;
+
+  /* Green touches */
+  --primary: #10b981; /* Emerald 500 */
+  --primary-hover: #059669; /* Emerald 600 */
+  --primary-light: #d1fae5;
+  --primary-dark: #064e3b;
+
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark theme (Navy Blue + Dark Green) - controlado por .dark en <html> */
+:where(html.dark .nutribrain-scope) {
+  --background: #060e17; /* Very dark navy */
+  --foreground: #e2e8f0; /* Slate 200 */
+  --card: #0b1522;
+  --card-alt: #0f1729;
+  --border: #1e293b;
+  --accent: #0f172a;
+  --text-muted: #94a3b8;
+  --text-secondary: #cbd5e1;
+
+  /* Green touches */
+  --primary: #10b981; /* Emerald 500 */
+  --primary-hover: #34d399; /* Emerald 400 */
+  --primary-light: #064e3b;
+  --primary-dark: #a7f3d0;
+}
+
+/* Box sizing base sin preflight global (equivalente al preflight de Tailwind,
+   pero acotado al scope para no tocar los estilos del studio). */
+:where(.nutribrain-scope),
+:where(.nutribrain-scope) *,
+:where(.nutribrain-scope) *::before,
+:where(.nutribrain-scope) *::after {
+  box-sizing: border-box;
+}
+
+:where(html:not(.dark) .nutribrain-scope) {
+  background-image: radial-gradient(
+    circle at top right,
+    #ecfdf5 0%,
+    #f8fafc 40%,
+    #f8fafc 100%
+  );
+  background-attachment: fixed;
+}
+
+:where(html.dark .nutribrain-scope) {
+  background-image: radial-gradient(
+    circle at top right,
+    #092015 0%,
+    #060e17 40%,
+    #060e17 100%
+  );
+  background-attachment: fixed;
+}
+
+/* Custom internal links to look like organic text but clickable */
+:where(.nutribrain-scope) .internal-link {
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--primary);
+  transition: all 0.3s ease;
+}
+
+:where(.nutribrain-scope) .internal-link:hover {
+  color: var(--primary-hover);
+  border-bottom: 1px solid var(--primary-hover);
+  text-shadow: 0 0 8px rgba(16, 185, 129, 0.3);
+}
+
+/* Custom scrollbar to make it premium (solo dentro del scope) */
+:where(.nutribrain-scope)::-webkit-scrollbar {
+  width: 8px;
+}
+
+:where(.nutribrain-scope)::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+:where(.nutribrain-scope)::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+:where(.nutribrain-scope)::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+:where(html.dark .nutribrain-scope)::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+:where(html.dark .nutribrain-scope)::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+:where(html.dark .nutribrain-scope)::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Los elementos de formulario del scope deben conservar el color de texto
+   oscuro/claro según el tema y la fuente heredada. */
+:where(.nutribrain-scope) button,
+:where(.nutribrain-scope) input,
+:where(.nutribrain-scope) select,
+:where(.nutribrain-scope) textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:where(.nutribrain-scope) a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:where(.nutribrain-scope) img {
+  display: block;
+  max-width: 100%;
+}

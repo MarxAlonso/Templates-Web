@@ -3,8 +3,8 @@
 
 import React, { useEffect, useRef } from "react";
 import { Minimize2, RotateCcw, ZoomIn, ZoomOut, Maximize } from "lucide-react";
-import { useStudio } from "../context/StudioContext";
-import { rutasOrgano } from "../app/data";
+import { useStudio } from "../../context/StudioContext";
+import { rutasOrgano } from "../../app/data";
 
 export default function Viewer3D() {
   const { 

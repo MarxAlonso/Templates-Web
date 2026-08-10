@@ -2,8 +2,8 @@
 
 import React from "react";
 import { ChevronDown } from "lucide-react";
-import { useStudio } from "../context/StudioContext";
-import { rutasOrgano } from "../app/data";
+import { useStudio } from "../../context/StudioContext";
+import { rutasOrgano } from "../../app/data";
 
 export default function GalleryCard() {
   const { collapsedStates, toggleCollapsed, setModals, selectedId, getOrgano } = useStudio();

@@ -2,13 +2,13 @@
 
 import React, { useEffect } from "react";
 import { StudioProvider, useStudio } from "../context/StudioContext";
-import Topbar from "../components/Topbar";
-import Sidebar from "../components/Sidebar";
-import Viewer3D from "../components/Viewer3D";
-import GalleryCard from "../components/GalleryCard";
-import CompareCard from "../components/CompareCard";
-import RightPanel from "../components/RightPanel";
-import Modals from "../components/Modals";
+import Topbar from "../components/home/Topbar";
+import Sidebar from "../components/home/Sidebar";
+import Viewer3D from "../components/home/Viewer3D";
+import GalleryCard from "../components/home/GalleryCard";
+import CompareCard from "../components/home/CompareCard";
+import RightPanel from "../components/home/RightPanel";
+import Modals from "../components/home/Modals";
 
 function StudioApp() {
   const { fullscreen, setFullscreen, setModals, setActiveView, toastMsg } = useStudio();

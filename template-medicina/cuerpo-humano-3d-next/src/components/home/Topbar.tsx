@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { Minimize2, RotateCcw, ZoomIn, ZoomOut, Maximize, ChevronDown, X, Layers3, Activity, MapPin, Link2, Moon, Sun, User } from "lucide-react";
-import { useStudio } from "../context/StudioContext";
+import { useStudio } from "../../context/StudioContext";
 
 export default function Topbar() {
   const { activeView, handleNavClick, theme, toggleTheme } = useStudio();
@@ -20,6 +20,7 @@ export default function Topbar() {
 
       <nav className="topbar__nav" id="topbar-nav">
         <Link href="/studio" className="nav-link-estudio">Estudio</Link>
+        <Link href="/nutribrain" className="topbar__creator-link"><Activity size={14} /><span>NutriBrain</span></Link>
         <button 
           className={activeView === "galeria" ? "is-active" : ""} 
           onClick={() => handleNavClick("galeria")}
